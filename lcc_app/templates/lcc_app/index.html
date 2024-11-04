@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LCC</title>
+    <link rel="shortcut icon" href="../../static/lcc_app/images/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../static/lcc_app/css/index.css">
+</head>
+<body>
+    <div class="start">
+        <h1 class="title_1">LCC: Reforço e Diversão</h1>
+        {% if user.is_authenticated %}
+            <a href="{% url 'logout' %}"><button class="login">Sair</button></a>
+            <a href="#"><button class="register">Aluno: {{ user.username }}</button></a>    
+        {% else %}
+            <a href="{% url 'login' %}"><button class="login">Entrar</button></a>
+            <a href="{% url 'register' %}"><button class="register">Registrar</button></a>    
+        {% endif %}
+    </div>
+    <div class="quite">
+
+    </div>
+    {% if user.is_authenticated %}
+        <div class="card"> 
+            <div class="P1">
+                <h1 class="title_p1">Primeiro Período</h1>
+                <hr class="hr1">
+                <a href="{% url 'Intro_Pc' %}"><button>Introdução à Computação</button></a>
+                <button>Introdução à Programação</button>
+                <button>Matemática Discreta</button>
+                <a href="{% url 'calculo_1' %}"><button>Cálculo 1</button></a>
+                <a href="{% url 'fundamento_antro' %}"><button>Fundamentos Antrofilosóficos da Educação</button></a>
+                <a href="{% url 'Metologia_cientifica' %}"><button>Metodologia Científica</button></a>
+            </div>
+        </div>
+    {% else %}
+        <div class="end">
+            <h1>Desenvolvido por universitários, para universitários de LCC.
+            Crie sua conta e acesse conteúdo exclusivo, gratuito.
+            Escolha a matéria e a prova para realizar seu quiz.
+            Oferecemos quizzes, anexos e videoaulas para potencializar seu aprendizado.
+            Utilizamos imagens e áudios para uma compreensão mais completa.</h1>
+        </div>
+    {% endif %}
+
+</body>
+</html>

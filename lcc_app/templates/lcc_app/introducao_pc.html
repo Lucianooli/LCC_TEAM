@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LCC| Introdução a Computação |</title>
+    <link rel="shortcut icon" href="../../static/lcc_app/images/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../static/lcc_app/css/introducao_pc.css">
+</head>
+<body>
+    <script>
+            document.addEventListener('DOMContentLoaded', function() {
+        const parte_1 = document.getElementById('prova_1');
+        const parte_3 = document.getElementById('prova_3');
+        const tela = document.getElementsByClassName('tela')[0];
+        let perguntas_erradas = [] ;
+        let total_perguntas = 21;  // Variável para armazenar as perguntas erradas
+        let acertos = 0;
+
+        parte_1.addEventListener('click',function() {
+            tela.innerHTML = '' ;
+
+            const titulo = document.createElement('h1');
+            const quiz = document.createElement('button');
+            const listra = document.createElement('hr');
+            const arquivos  = document.createElement('button');
+            const videoaulas =  document.createElement('button');
+            const desafios = document.createElement('button');
+
+            desafios.textContent = 'Desafios';
+            desafios.className = 'Quiz';
+            arquivos.textContent = 'Matérias em PDF';
+            arquivos.className = 'Quiz';
+            videoaulas.textContent = 'Video-Aulas';
+            videoaulas.classList = 'Quiz';
+            titulo.textContent = 'Introdução a Arquitetura de Computadores';
+            titulo.className = 'Titulo';
+            quiz.textContent = 'Quiz';
+            quiz.className = 'Quiz';
+            quiz.id = 'pergunta';
+
+            tela.appendChild(titulo);
+            tela.appendChild(listra);
+            tela.appendChild(arquivos);
+            tela.appendChild(desafios);
+            tela.appendChild(videoaulas);
+            tela.appendChild(quiz);
+
+
+            arquivos.addEventListener('click', function(){
+                tela.innerHTML = '';
+                const arquivos = document.getElementById('arquivos');
+                const pdf_0 = document.createElement('button');
+                const donwload_0 = document.createElement('a');
+                donwload_0.href = '{{ pdf_0.arquivo.url }}';  
+                donwload_0.download = '{{ pdf_0.nome  }}';
+                pdf_0.textContent = ('0-Apresentacao da disciplina');
+                pdf_0.className = ('Quiz');
+                pdf_0.onclick = function(){
+                    donwload_0.click();
+                }
+                
+                
+                const pdf_1 = document.createElement('button');
+                const donwload_1 = document.createElement('a');
+                donwload_1.href = '{{ pdf_1.arquivo.url }}';  
+                donwload_1.download = '{{ pdf_1.nome  }}';
+                pdf_1.textContent = ('{{ pdf_1.nome }}');
+                pdf_1.className = ('Quiz');
+                pdf_1.onclick = function(){
+                    donwload_1.click();
+                }
+
+                const pdf_2 = document.createElement('button');
+                const donwload_2 = document.createElement('a');
+                donwload_2.href = '{{ pdf_2.arquivo.url }}';  
+                donwload_2.download = '{{ pdf_2.nome  }}';
+                pdf_2.textContent = ('{{ pdf_2.nome }}');
+                pdf_2.className = ('Quiz');
+                pdf_2.onclick = function(){
+                    donwload_2.click();
+                }
+
+                const pdf_3 = document.createElement('button');
+                const donwload_3 = document.createElement('a');
+                donwload_3.href = '{{ pdf_3.arquivo.url }}';  
+                donwload_3.download = '{{ pdf_3.nome  }}';
+                pdf_3.textContent = ('{{ pdf_3.nome }}');
+                pdf_3.className = ('Quiz');
+                pdf_3.onclick = function(){
+                    donwload_3.click();
+                }
+
+                const pdf_4 = document.createElement('button');
+                const donwload_4 = document.createElement('a');
+                donwload_4.href = '{{ pdf_4.arquivo.url }}';  
+                donwload_4.download = '{{ pdf_4.nome  }}';
+                pdf_4.textContent = ('{{ pdf_4.nome }}');
+                pdf_4.className = ('Quiz');
+                pdf_4.onclick = function(){
+                    donwload_4.click();
+                }
+                const pdf_5 = document.createElement('button');
+                const donwload_5 = document.createElement('a');
+                donwload_5.href = '{{ pdf_5.arquivo.url }}';  
+                donwload_5.download = '{{ pdf_5.nome  }}';
+                pdf_5.textContent = ('{{ pdf_5.nome }}');
+                pdf_5.className = ('Quiz');
+                pdf_5.onclick = function(){
+                    donwload_5.click();
+                }
+                const pdf_6 = document.createElement('button');
+                const donwload_6 = document.createElement('a');
+                donwload_6.href = '{{ pdf_6.arquivo.url }}';  
+                donwload_6.download = '{{ pdf_6.nome  }}';
+                pdf_6.textContent = ('{{ pdf_6.nome }}');
+                pdf_6.className = ('Quiz');
+                pdf_6.onclick = function(){
+                    donwload_6.click();
+                }
+                tela.appendChild(pdf_0);
+                tela.appendChild(pdf_1);
+                tela.appendChild(pdf_2);
+                tela.appendChild(pdf_3);
+                tela.appendChild(pdf_4);
+                tela.appendChild(pdf_5);
+                tela.appendChild(pdf_6);
+
+            })
+            desafios.addEventListener('click',function(){
+                tela.innerHTML = '';
+                const desafio_1 = document.createElement('button');
+                const donwload_1 = document.createElement('a');
+                donwload_1.href = '{{ desafio_0.arquivo.url }}';  
+                donwload_1.download = '{{ desafio_0.nome  }}';
+                desafio_1.textContent = ('{{ desafio_0.nome }}');
+                desafio_1.className = ('Quiz');
+                desafio_1.onclick = function(){
+                    donwload_1.click();
+                }
+                tela.appendChild(desafio_1);
+            })
+            videoaulas.addEventListener('click',function(){
+                tela.innerHTML = '';
+                
+            })
+        })
+
+
+
+
+
+        parte_3.addEventListener('click', function() {
+            // Limpa o conteúdo atual da tela
+            tela.innerHTML = '';
+
+            // Cria o título e o botão de quiz
+            const titulo = document.createElement('h1');
+            const quiz = document.createElement('button');
+            const listra = document.createElement('hr');
+            const arquivos  = document.createElement('button');
+            const videoaulas =  document.createElement('button');
+            const desafios = document.createElement('button');
+
+            // Define o conteúdo e as classes dos novos elementos
+            desafios.textContent = 'Desafios';
+            desafios.className = 'Quiz';
+            arquivos.textContent = 'Matérias em PDF';
+            arquivos.className = 'Quiz';
+            videoaulas.textContent = 'Video-Aulas';
+            videoaulas.classList = 'Quiz';
+            titulo.textContent = 'Introdução a Arquitetura de Computadores';
+            titulo.className = 'Titulo';
+            quiz.textContent = 'Quiz';
+            quiz.className = 'Quiz';
+            quiz.id = 'pergunta';
+
+            // Adiciona o título e o botão dentro da tela
+            tela.appendChild(titulo);
+            tela.appendChild(listra);
+            tela.appendChild(arquivos);
+            tela.appendChild(desafios);
+            tela.appendChild(videoaulas);
+            tela.appendChild(quiz);
+
+            quiz.addEventListener('click', function() {
+                tela.innerHTML = '';
+                const iniciar = document.createElement('button');
+                const Jogo = document.createElement('h1');
+                const hr = document.createElement('hr');
+
+                Jogo.textContent = 'Perguntas e Respostas';
+                Jogo.className = 'Titulo';
+                iniciar.textContent = 'Iniciar';
+                iniciar.classList = 'Quiz';
+                tela.appendChild(Jogo);
+                tela.appendChild(hr);
+                tela.appendChild(iniciar);
+
+                iniciar.addEventListener('click', function() {
+
+
+
+
+                    let perguntaAtual = 0;
+
+                    const perguntas = [
+                        {
+                            pergunta: '1 – Qual a principal função de um processador digital?',
+                            opcoes: [
+                                'Executar instruções de programas, realizando operações aritméticas, lógicas e de controle, e coordenando as atividades do computador.',
+                                'Apenas armazenar dados temporários e enviar informações diretamente para a memória RAM.',
+                                'Gerenciar exclusivamente a interface gráfica do usuário e controlar os dispositivos de entrada, como teclado e mouse.',
+                                'Manter o sistema operacional em funcionamento, sem realizar cálculos ou processamentos.'
+                            ],
+                            resposta_correta: 0 // A primeira opção é a correta
+                        },
+                        {
+                            pergunta: '2 – Qual o principal componente de um computador responsável pela execução de programas?',
+                            opcoes: [
+                                'Memória RAM',
+                                'Disco Rígido',
+                                'Processador (CPU)',
+                                'Placa de Vídeo'
+                            ],
+                            resposta_correta: 2 // A terceira opção é a correta
+                        },
+                        {
+                            pergunta: '3 – Qual a diferença de software e de hardware.',
+                            opcoes: [
+                                'Software é a parte física do computador, como o processador e a memória, enquanto hardware são os programas que rodam no computador.',
+                                'Software e hardware são a mesma coisa, pois ambos se referem aos componentes físicos necessários para o funcionamento do computador.',
+                                'Hardware é o sistema operacional, e software são os circuitos e chips que compõem o processador e a memória.',
+                                'Software são os programas e instruções que dizem ao computador o que fazer, enquanto hardware é a parte física do computador que executa essas instruções'
+                            ],
+                            resposta_correta: 3
+
+                        },
+                        {
+                            pergunta: '4 – Porque termos uma hierarquia de abstrações no projeto de sistemas de computadores?',
+                            opcoes:[
+                                'A hierarquia de abstrações permite que todo o sistema seja projetado de uma vez, sem a necessidade de dividir em camadas.',
+                                'A hierarquia de abstrações é necessária apenas para o hardware, pois o software não precisa de organização em camadas.',
+                                'A hierarquia de abstrações organiza o sistema em camadas, permitindo que engenheiros trabalhem em diferentes níveis de detalhe, facilitando o desenvolvimento e a manutenção.',
+                                'A hierarquia de abstrações serve para aumentar a complexidade do sistema, exigindo mais tempo para a implementação e a manutenção.',
+                            ],
+                            resposta_correta: 2
+
+                        },
+                        {
+                            pergunta: '5 – Diferença de um tradutor (compilador) de interpretador.?',
+                            opcoes:[
+                                'Compilador traduz o código-fonte inteiro para código executável antes da execução, enquanto o interpretador traduz e executa o código linha por linha durante a execução.',
+                                'Compilador traduz o código linha por linha durante a execução, enquanto o interpretador traduz o código completo antes da execução.',
+                                'Compilador e interpretador são a mesma coisa, ambos traduzem o código diretamente para código de máquina.',
+                                'O compilador executa o código imediatamente, enquanto o interpretador gera um arquivo executável para ser rodado depois.'
+                            ],
+                            resposta_correta: 0
+                        },
+                        {
+                            pergunta: '6 – Quais as partes que compõem um processador? Qual a função de cada uma delas?',
+                            opcoes:[
+                                'A Unidade de Controle (UC) é a parte responsável pela coordenação geral, interpretando instruções do sistema e gerenciando o fluxo de dados entre todos os componentes do processador para garantir execução eficiente.',
+                                'Os registradores atuam como uma memória rápida interna, armazenando dados temporários necessários para a execução de operações e cálculos essenciais no processador, melhorando a velocidade e a eficiência geral.',
+                                'Um processador é composto por: Unidade de Controle (UC): controla o fluxo de dados e interpreta as instruções. Unidade Lógica e Aritmética (ULA): executa operações lógicas e aritméticas. Registradores: mantêm dados temporários. Cache: uma memória rápida que armazena dados acessados frequentemente.',
+                                'O cache do processador é uma memória auxiliar que armazena dados de acesso frequente, melhorando o desempenho ao permitir acesso rápido a informações essenciais durante as operações.'
+                            ],
+                            resposta_correta: 2
+                        },
+                        {
+                            pergunta: '7 – Pra que servem os registradores do processador e quais os mais importantes?',
+                            opcoes:[
+                                'Os registradores são usados para armazenar arquivos completos, programas inteiros e todos os dados de forma permanente, funcionando como uma memória interna extensa. Além de permitir que o processador tenha acesso direto a esses arquivos sempre que precisar, esses registradores são responsáveis pela organização de toda a estrutura de arquivos e programas, armazenando-os para que estejam prontos para execução. Assim, são essenciais para manter o sistema funcionando.',
+                                'O registrador de instrução (IR) é utilizado para armazenar o resultado de cada operação aritmética, como somas e subtrações, assim como de operações lógicas, como comparações. Isso facilita o acesso imediato aos resultados calculados e permite que o processador utilize esses valores em instruções futuras. Além disso, o IR também retém esses valores enquanto o programa é executado, otimizando o processamento e o desempenho da CPU.',
+                                'O contador de programa (PC) é utilizado para armazenar todas as variáveis que o processador precisa durante a execução do programa. Ele organiza e mantém essas variáveis em ordem, permitindo que o processador tenha acesso rápido e direto a elas quando necessário, o que garante que o sistema funcione corretamente e sem falhas. Essas variáveis são mantidas em estado temporário e descartadas ao final da execução, para que novas possam ser carregadas.',
+                                'Registradores armazenam dados temporários durante a execução de instruções. Os mais importantes incluem o acumulador (para operações aritméticas), o contador de programa (para endereços da próxima instrução) e o registrador de instrução (para a instrução atual).'
+                            ],
+                            resposta_correta:3
+                        },
+                        {
+                            pergunta:'8 – Explique o funcionamento do caminho de dados.',
+                            opcoes: [
+                                'O caminho de dados conecta componentes como a ULA, registradores e memória, permitindo a transferência e o processamento de dados dentro do processador, facilitando a execução de instruções e operações com eficiência e coordenação em tempo real.',
+                                'O caminho de dados só lida com a memória do computador, conectando diretamente a memória aos componentes do processador para garantir o acesso rápido e exclusivo aos dados armazenados, sem incluir outras operações de entrada e saída.',
+                                'O caminho de dados só é utilizado durante a execução de operações lógicas, sendo exclusivo para o processamento de cálculos lógicos e operações de comparação, sem realizar nenhum tipo de transferência de dados entre componentes.',
+                                'O caminho de dados move informações apenas entre a CPU e os dispositivos de entrada e saída, permitindo que o processador comunique-se exclusivamente com periféricos e dispositivos externos, sem lidar com a memória interna ou registradores.'
+                            ],
+                            resposta_correta:0
+                        },
+                        {
+                            pergunta: '9 – Quais os tipos de instruções de um processador? Defina-as.',
+                            opcoes: [
+                                'Instruções de desvio são usadas apenas para alterar valores de variáveis em um programa, sem interferir no fluxo principal de execução. Elas não são responsáveis por saltos nem por redirecionar a execução do código para outras partes do programa, como fazem as instruções de controle.',
+                                'Aritméticas e Lógicas: Realizam cálculos e operações lógicas. Controle: Alteram o fluxo de execução, como saltos. Movimentação: Transferem dados entre registradores, memória e dispositivos, permitindo comunicação rápida e eficiente entre os componentes.',
+                                'As instruções aritméticas realizam apenas operações de comparação entre dois números, sem efetuar somas, subtrações, multiplicações ou divisões. Elas são usadas exclusivamente para verificar relações lógicas entre valores numéricos.',
+                                'Instruções de transferência de dados servem para realizar cálculos entre registradores, possibilitando que o processador efetue operações diretamente sobre os valores armazenados nos registradores, sem precisar recorrer a outras instruções.'
+                            ],
+                            resposta_correta:1
+                        },
+                        {
+                            pergunta:'10 – Descreva, com suas palavras, o ciclo de busca-decodificação-execução.No ciclo, o processador:',
+                            opcoes:[
+                                'Busca a instrução da memória, Decodifica a instrução para entender o que fazer, Executa a instrução, processando os dados ou manipulando o fluxo de controle. Esse ciclo se repete continuamente enquanto o programa é executado, garantindo que cada comando seja processado na ordem correta.',
+                                'No ciclo de busca, o processador executa a instrução diretamente da memória, sem passar pelas etapas de decodificação e execução. Isso significa que a instrução é processada no momento em que é localizada, eliminando a necessidade de interpretar ou preparar a instrução antes da execução.',
+                                'Durante a decodificação, o processador realiza a operação aritmética ou lógica diretamente, sem a necessidade de uma etapa de execução separada. Esse processo permite que as operações sejam realizadas enquanto a instrução é decodificada, agilizando o processamento das instruções no ciclo.',
+                                'Na execução, o processador armazena o resultado da operação diretamente no disco rígido, finalizando o ciclo de instrução. Ao enviar o resultado para o armazenamento permanente, a operação é concluída e o processador pode então iniciar o próximo ciclo.'
+                            ],
+                            resposta_correta:0
+                        },
+                        {
+                            pergunta:'11-Cite as vantagens de se ter instruções interpretadas ao invés de implementadas em hardware.',
+                            opcoes:[
+                                'Instruções interpretadas são sempre mais rápidas do que as implementadas em hardware, pois eliminam a necessidade de esperar pelo processamento do hardware. Essa velocidade se mantém constante, independente do tipo de instrução que está sendo executada.',
+                                'Instruções interpretadas são mais flexíveis, fáceis de modificar e podem ser adaptadas para diferentes plataformas sem alterar o hardware. Isso permite ajustes e atualizações no código de maneira mais eficiente, economizando tempo e recursos.',
+                                'Instruções interpretadas ocupam menos espaço na memória do processador, o que facilita o armazenamento de mais operações e libera memória para outras funções importantes do sistema, tornando o processo mais eficiente e otimizado.',
+                                'Instruções implementadas em hardware não podem ser otimizadas, o que limita o desempenho, pois uma vez que o hardware é projetado, ele não pode ser alterado, impedindo melhorias e adaptações a novas tecnologias ou necessidades do sistema.'
+                            ],
+                            resposta_correta:1
+                        },
+                        {
+                            pergunta:'12-Defina microinstrução.',
+                            opcoes:[
+                                'Microinstrução é usada apenas para otimizar o desempenho das instruções de controle, melhorando a eficiência de comandos complexos e reduzindo o tempo necessário para o processador concluir suas operações, mas sem realizar funções diretas no processamento de dados.',
+                                'Microinstrução é a mesma coisa que uma instrução de alto nível que o processador executa, sendo responsável por representar comandos completos como aqueles programados em linguagens de programação, e direcionando a execução completa no processador.',
+                                'Microinstrução é a instrução mais simples que controla operações básicas no processador, como mover dados entre registradores. Essas instruções de baixo nível garantem o funcionamento das operações internas e permitem o controle detalhado de cada etapa do processamento.',
+                                'Microinstruções são armazenadas na memória principal do computador, onde permanecem junto com outros dados e programas, permitindo que o processador as acesse e execute conforme necessário durante a execução de aplicações.'
+                            ],
+                            resposta_correta:2
+                        },
+                        {
+                            pergunta:'13-Quais os tipos de paralelismos existentes?',
+                            opcoes:[
+                                'Paralelismo de nível de instrução (ILP): Executa múltiplas instruções simultaneamente. Paralelismo de dados (DLP): Processa grandes volumes de dados em paralelo. Paralelismo de tarefas (TLP): Executa várias tarefas ao mesmo tempo, permitindo uma melhor utilização dos recursos do processador e aumentando a eficiência do processamento.',
+                                'O paralelismo de nível de instrução (ILP) é quando múltiplos processadores executam diferentes instruções ao mesmo tempo, dividindo a carga de trabalho entre eles. Isso melhora o desempenho geral, pois cada processador pode operar independentemente e completar tarefas em paralelo.',
+                                'O paralelismo de dados (DLP) significa que diferentes programas são executados paralelamente no mesmo processador, utilizando técnicas de divisão de dados para acelerar o processamento e aumentar a eficiência na manipulação de grandes conjuntos de dados.',
+                                'O paralelismo de nível de tarefa (TLP) é quando múltiplos núcleos de um processador são usados para realizar a mesma tarefa, otimizando o tempo de execução e permitindo que o sistema execute várias instâncias da mesma operação em paralelo.'
+                            ],
+                            resposta_correta:0
+                        },
+                        {
+                            pergunta:'14-Defina e exemplifique pipeline',
+                            opcoes:[
+                                'Pipeline é uma técnica que armazena instruções temporariamente em um processador, permitindo a execução simultânea de várias operações sem a divisão rigorosa em estágios distintos, promovendo maior eficiência.',
+                                'O conceito de pipeline é aplicado exclusivamente a processadores de arquitetura de 32 bits, o que limita sua eficácia em plataformas mais modernas, dificultando a implementação de melhorias significativas no desempenho geral.',
+                                'Pipeline é um método que organiza a execução de instruções em fases específicas, possibilitando que várias etapas sejam realizadas simultaneamente, como em um processador que busca, decodifica e executa comandos em um fluxo contínuo de dados.',
+                                'No modelo de pipeline, as instruções são processadas em uma única passagem, sem separação em fases distintas, o que pode levar a uma diminuição na eficiência geral e à limitação das operações que o processador pode realizar ao mesmo tempo.'
+                            ],
+                            resposta_correta:2
+                        },
+                        {
+                            pergunta:'15-Qual a diferença entre um pipeline e uma estrutura superescalar em um processador?',
+                            opcoes:[
+                                'Pipeline e superescalar são a mesma coisa, pois ambos processam múltiplas instruções ao mesmo tempo, embora utilizem abordagens diferentes para gerenciar o fluxo de execução das instruções em um processador moderno.',
+                                'O pipeline processa várias partes de uma instrução em paralelo, enquanto a superescalar permite a execução simultânea de várias instruções completas em múltiplas unidades de execução, otimizando assim o desempenho geral do processador.',
+                                'No pipeline, várias instruções podem ser executadas ao mesmo tempo, mas no superescalar, cada núcleo só executa uma instrução por vez, limitando a eficiência do processamento em comparação com sistemas mais modernos.',
+                                'O pipeline permite que o processador execute instruções em paralelo, enquanto a estrutura superescalar apenas melhora a velocidade de um processador único, sem realmente aumentar o número de instruções processadas simultaneamente.'
+                            ],
+                            resposta_correta:1
+                        },
+                        {
+                            pergunta:'16-O que são computadores paralelos?',
+                            opcoes:[
+                                'Computadores paralelos são mais lentos que computadores sequenciais, pois dividem o trabalho entre vários processadores, resultando em um tempo de execução mais prolongado para certas tarefas em comparação com sistemas que seguem uma abordagem sequencial.',
+                                'Em um computador paralelo, todos os processadores executam a mesma tarefa ao mesmo tempo, sem divisão de trabalho, o que pode levar a uma utilização ineficiente dos recursos de processamento disponíveis e a um desempenho reduzido em algumas situações.',
+                                'Computadores paralelos são aqueles que utilizam múltiplos processadores, mas apenas executam um único programa de cada vez, o que limita a sua capacidade de realizar operações simultâneas e impede a maximização do desempenho geral do sistema.',
+                                'Computadores paralelos utilizam múltiplos processadores ou núcleos para executar várias tarefas simultaneamente, melhorando o desempenho e a eficiência em ambientes que demandam processamento intenso e manipulação de grandes volumes de dados.'
+                            ],
+                            resposta_correta:3
+                        },
+                        {
+                            pergunta:'17-Qual a vantagem na execução de instruções de um computador paralelo em relação a um com paralelismo dentro da própria CPU?',
+                            opcoes:[
+                                'O paralelismo dentro da CPU é mais vantajoso, pois evita a comunicação entre diferentes processadores, resultando em uma execução mais rápida e eficiente, enquanto o computador paralelo pode enfrentar latências devido à troca de informações.',
+                                'Computadores paralelos são mais rápidos porque eles utilizam múltiplas CPUs, o que permite que várias operações sejam realizadas simultaneamente, enquanto a CPU com paralelismo interno pode processar as instruções de forma mais lenta, limitando o desempenho.',
+                                'Computadores paralelos aumentam a capacidade de processamento, permitindo a execução de tarefas maiores e mais complexas simultaneamente, enquanto o paralelismo dentro da CPU é restringido pela arquitetura e pelo número de núcleos disponíveis no processador.',
+                                'Computadores paralelos são úteis apenas para tarefas simples, enquanto CPUs com paralelismo interno conseguem lidar com tarefas mais complexas e rápidas, o que limita o potencial dos sistemas que dependem de uma única unidade de processamento.'
+                            ],
+                            resposta_correta:1
+                        },
+                        {
+                            pergunta:'18-O que são multiprocessadores?',
+                            opcoes:[
+                                'Multiprocessadores são sistemas com dois ou mais processadores que compartilham a memória e trabalham juntos para executar tarefas simultâneas, permitindo maior eficiência e desempenho em comparação com sistemas de processamento único.',
+                                'Multiprocessadores são computadores que utilizam apenas um único processador para realizar múltiplas tarefas simultaneamente, o que limita sua capacidade de processamento e não tira proveito do potencial de processamento paralelo disponível.',
+                                'Multiprocessadores são compostos por vários processadores, mas eles apenas dividem uma única tarefa entre si, o que não aproveita totalmente as capacidades de processamento paralelo e pode resultar em ineficiências operacionais.',
+                                'Os multiprocessadores são menos eficientes porque precisam de mais memória do que os computadores com um único processador, tornando a gestão de recursos mais complexa e potencialmente levando a um aumento nos custos operacionais.'
+                            ],
+                            resposta_correta:0
+                        },
+                        {
+                            pergunta:'19-Cite o que pode causar conflito no uso de multiprocessadores e como se pode minimizar isso.',
+                            opcoes:[
+                                'Conflitos em multiprocessadores são causados apenas por problemas de hardware, como falhas nos processadores, mas também podem surgir devido a uma má gestão da comunicação entre as unidades, impactando a eficiência do sistema.',
+                                'Conflitos podem ocorrer ao acessar a mesma memória ou recurso simultaneamente. Para minimizar esses conflitos, é fundamental utilizar técnicas de sincronização, além de um gerenciamento eficiente de cache e memória, garantindo que os recursos sejam utilizados de forma equilibrada.',
+                                'Em multiprocessadores, os conflitos podem ser evitados desativando todos os processadores secundários e usando apenas o processador principal, o que limita significativamente a capacidade de processamento e impede a otimização do sistema.',
+                                'Os conflitos em multiprocessadores só acontecem quando há comunicação entre os processadores e podem ser resolvidos sem necessidade de gerenciamento, levando a uma percepção equivocada sobre a complexidade envolvida na operação desses sistemas.'
+                            ],
+                            resposta_correta:1
+                        },
+                        {
+                            pergunta:'20-Defina multicomputadores',
+                            opcoes:[
+                                'Multicomputadores são sistemas que utilizam múltiplos processadores dentro de uma única unidade central de processamento (CPU), mas essa definição se aplica mais a sistemas de multiprocessamento do que a multicomputadores em si.',
+                                'Em um sistema de multicomputadores, todos os computadores compartilham a mesma memória central, o que não reflete corretamente a arquitetura desses sistemas, já que cada computador opera de forma independente.',
+                                'Multicomputadores são utilizados apenas em ambientes domésticos para realizar tarefas básicas como navegação na internet, limitando suas aplicações e não reconhecendo seu verdadeiro potencial em cenários de computação distribuída.',
+                                'Multicomputadores são sistemas que utilizam múltiplos computadores conectados em rede, cada um com sua própria memória e processador, para resolver problemas colaborativamente, maximizando a eficiência e permitindo a divisão de tarefas complexas entre várias máquinas.'
+                            ],
+                            resposta_correta:3
+                        },
+                        {
+                            pergunta:'21- Por que dizemos que multiprocessadores são fortemente acoplados e multicomputadores fracamente acoplados',
+                            opcoes:[
+                                'Multiprocessadores são fracamente acoplados porque têm uma conexão física mais fraca entre os processadores, dificultando a comunicação e o compartilhamento de dados necessários para uma execução eficiente das tarefas.',
+                                'Multiprocessadores compartilham memória e comunicação rápida, por isso são fortemente acoplados. Já os multicomputadores têm memória separada e comunicação mais lenta, o que resulta em uma estrutura fracamente acoplada, dificultando a colaboração em tarefas complexas.',
+                                'Os multiprocessadores são fracamente acoplados porque cada processador pode operar de forma independente, limitando a eficiência geral do sistema e prejudicando o desempenho quando múltiplas tarefas precisam ser realizadas simultaneamente.',
+                                'Multicomputadores são considerados fortemente acoplados porque a comunicação entre eles é rápida e direta, como em uma rede local, possibilitando um trabalho conjunto eficiente e facilitando a troca de dados entre máquinas para otimizar a execução de tarefas complexas.  '
+                            ],
+                            resposta_correta:1
+                        }
+                        // Adicione mais perguntas aqui
+                    ];
+                    function mostrarPergunta(index) {
+                        tela.innerHTML = '';
+
+                        const Pergunta = document.createElement('h1');
+                        const hr = document.createElement('hr');
+                        Pergunta.className = 'Titulo2';
+                        Pergunta.textContent = perguntas[index].pergunta;
+
+                        const opcao_1 = document.createElement('button');
+                        const opcao_2 = document.createElement('button');
+                        const opcao_3 = document.createElement('button');
+                        const opcao_4 = document.createElement('button');
+
+                        opcao_1.textContent = perguntas[index].opcoes[0];
+                        opcao_2.textContent = perguntas[index].opcoes[1];
+                        opcao_3.textContent = perguntas[index].opcoes[2];
+                        opcao_4.textContent = perguntas[index].opcoes[3];
+
+                        opcao_1.className = 'Quiz';
+                        opcao_2.className = 'Quiz';
+                        opcao_3.className = 'Quiz';
+                        opcao_4.className = 'Quiz';
+
+
+
+                        tela.appendChild(Pergunta);
+                        tela.appendChild(hr);
+                        tela.appendChild(opcao_1);
+                        tela.appendChild(opcao_2);
+                        tela.appendChild(opcao_3);
+                        tela.appendChild(opcao_4);
+
+                        function verificarResposta(opcao) {
+                            if (opcao === perguntas[index].resposta_correta) {
+                                alert('Resposta correta!');
+                                acertos += 1; // Adiciona 1 ponto por resposta correta
+
+                            } else {
+                                alert('Resposta incorreta!');
+                                perguntas_erradas.push(perguntaAtual)
+                            }
+                            perguntaAtual++;
+                            if (perguntaAtual < perguntas.length) {
+                                mostrarPergunta(perguntaAtual); // Mostra a próxima pergunta
+                            } else {
+                                alert('Quiz finalizado!');
+                                tela.innerHTML='';
+                                let erros = (total_perguntas - acertos);
+                                let media = (acertos / total_perguntas) * 100;
+                                const resultadoFinal = document.createElement('div');
+                                const Pontuação_final = document.createElement('h1');
+                                const Pontuação_final_span_1 = document.createElement('span');
+                                const Pontuação_final_span_2 = document.createElement('span');
+                                Pontuação_final_span_1.className = ('resultado_2');
+                                Pontuação_final_span_2.className = ('valor');
+                                Pontuação_final_span_1.textContent = ('Pontuação final: ')
+                                Pontuação_final_span_2.textContent = (`${Math.round(media)}%`)
+                                Pontuação_final.appendChild(Pontuação_final_span_1);
+                                Pontuação_final.appendChild(Pontuação_final_span_2);
+
+                                const total_perguntas_acertadas = document.createElement('h1');
+                                const total_perguntas_acertadas_span_1 = document.createElement('span');
+                                const total_perguntas_acertadas_span_2 = document.createElement('span');
+                                total_perguntas_acertadas_span_1.className = ('resultado_2');
+                                total_perguntas_acertadas_span_2.className = ('valor');
+                                total_perguntas_acertadas_span_1.textContent = ('Total de perguntas acertadas: ')
+                                total_perguntas_acertadas_span_2.textContent = (`${acertos}`);
+                                total_perguntas_acertadas.appendChild(total_perguntas_acertadas_span_1);
+                                total_perguntas_acertadas.appendChild(total_perguntas_acertadas_span_2);
+
+                                const total_perguntas_erradas = document.createElement('h1');
+                                const total_perguntas_erradas_span_1 = document.createElement('span');
+                                const total_perguntas_erradas_span_2 = document.createElement('span');
+                                total_perguntas_erradas_span_1.className = ('resultado_2');
+                                total_perguntas_erradas_span_2.className = ('valor');
+                                total_perguntas_erradas_span_1.textContent = ('total de perguntas erradas: ')
+                                total_perguntas_erradas_span_2.textContent = (` ${erros} `)
+                                total_perguntas_erradas.appendChild(total_perguntas_erradas_span_1);
+                                total_perguntas_erradas.appendChild(total_perguntas_erradas_span_2);
+
+                                const lista_de_perguntas_erradas = document.createElement('h1');
+                                const lista_de_perguntas_erradas_span_1 = document.createElement('span');
+                                const lista_de_perguntas_erradas_span_2 = document.createElement('span');
+                                lista_de_perguntas_erradas_span_1.className = ('resultado_2');
+                                lista_de_perguntas_erradas_span_2.className = ('valor');
+                                lista_de_perguntas_erradas_span_1.textContent = ('Questões erradas: ');
+                                lista_de_perguntas_erradas_span_2.textContent = (`${perguntas_erradas}`);
+                                lista_de_perguntas_erradas.appendChild(lista_de_perguntas_erradas_span_1);
+                                lista_de_perguntas_erradas.appendChild(lista_de_perguntas_erradas_span_2);
+                                const final = document.createElement('h1');
+                                const hr_1 = document.createElement('hr');
+                                const hr_2 = document.createElement('hr');
+                                
+
+
+                                final.textContent = ('Quiz Finalizado')
+                                final.className = ('resultado_1')
+                                resultadoFinal.className = ('resultado_final');
+
+                                resultadoFinal.appendChild(final)
+                                resultadoFinal.appendChild(Pontuação_final);
+                                resultadoFinal.appendChild(hr_1)
+                                resultadoFinal.appendChild(total_perguntas_acertadas);
+                                resultadoFinal.appendChild(hr_2)
+                                resultadoFinal.appendChild(total_perguntas_erradas);
+                                resultadoFinal.appendChild(hr)
+                                resultadoFinal.appendChild(lista_de_perguntas_erradas);
+
+                                tela.appendChild(resultadoFinal);
+
+                                // Você pode adicionar lógica para mostrar o resultado final aqui.
+                            }
+                        }
+
+
+                        // Adicionando eventos de clique para verificar a resposta
+                        opcao_1.addEventListener('click', function() {
+                            verificarResposta(0);
+                        });
+                        opcao_2.addEventListener('click', function() {
+                            verificarResposta(1);
+                        });
+                        opcao_3.addEventListener('click', function() {
+                            verificarResposta(2);
+                        });
+                        opcao_4.addEventListener('click', function() {
+                            verificarResposta(3);
+                        });
+                    }
+
+                    mostrarPergunta(perguntaAtual); // Mostra a primeira pergunta
+                });
+            });
+            videoaulas.addEventListener('click',function(){
+                tela.innerHTML = '';
+                const videoaulas_1 = document.createElement('iframe');
+                const videoaulas_2 = document.createElement('iframe');
+                const videoaulas_3 = document.createElement('iframe');
+                const videoaulas_4 = document.createElement('iframe');
+                const videoaulas_5 = document.createElement('iframe');
+                const videoaulas_6 = document.createElement('iframe');
+
+                videoaulas_1.src = ('https://www.youtube.com/embed/kPPcJsMKb4g?list=PL866_LrQxNVipiEgWtJMK5Fcgc6IBfVvc&index=7');
+                videoaulas_1.controls = true;
+                videoaulas_1.width = 640;
+                videoaulas_1.height = 360;
+                videoaulas_1.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'; // Permissões
+                videoaulas_1.allowFullscreen = true; // Permite que o vídeo seja exibido em tela cheia
+
+                videoaulas_2.src = ('https://www.youtube.com/embed/7mXaq3RHnyw?si=-4A9M1EGqsYcqRwE');
+                videoaulas_2.controls = true;
+                videoaulas_2.width = 640;
+                videoaulas_2.height = 360;
+                videoaulas_2.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+                videoaulas_2.allowFullscreen = true; // Permite que o vídeo seja exibido em tela cheia
+
+                videoaulas_3.src = ('https://www.youtube.com/embed/6M98CKs1GX8?si=GoYEdRG2dUy3XFk9');
+                videoaulas_3.controls = true
+                videoaulas_3.width = 640;
+                videoaulas_3.height = 360;
+                videoaulas_3.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+                videoaulas_3.allowFullscreen = true; // Permite que o vídeo seja exibido em tela cheia
+
+
+                videoaulas_4.src = ('https://www.youtube.com/embed/uWYGBhF2o10?si=M4HuAHVPTk67VhVQ');
+                videoaulas_4.controls = true
+                videoaulas_4.width = 640;
+                videoaulas_4.height = 360;
+                videoaulas_4.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+                videoaulas_4.allowFullscreen = true; // Permite que o vídeo seja exibido em tela cheia
+
+                videoaulas_5.src = ('https://www.youtube.com/embed/OUpNdVoHS60?si=looHgzA4QKDs_Wfe');
+                videoaulas_5.controls = true
+                videoaulas_5.width = 640;
+                videoaulas_5.height = 360;
+                videoaulas_5.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+                videoaulas_5.allowFullscreen = true; // Permite que o vídeo seja exibido em tela cheia
+
+                videoaulas_6.src = ('https://www.youtube.com/embed/VkM9y3wpI4U?si=_31eYTIQXgug9RAP');
+                videoaulas_6.controls = true
+                videoaulas_6.width = 640;
+                videoaulas_6.height = 360;
+                videoaulas_6.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+                videoaulas_6.allowFullscreen = true; // Permite que o vídeo seja exibido em tela cheia
+
+                tela.appendChild(videoaulas_1);
+                tela.appendChild(videoaulas_2);
+                tela.appendChild(videoaulas_3);
+                tela.appendChild(videoaulas_4);
+                tela.appendChild(videoaulas_5);
+                tela.appendChild(videoaulas_6);
+            })
+            arquivos.addEventListener('click',function(){
+                tela.innerHTML = '';
+                const pdf_1 = document.createElement('button');
+                const donwload_1 = document.createElement('a');
+                donwload_1.href= '12_-_Organizao_Estruturada_de_Computadores';
+                donwload_1.download = 'Organizacao_Estruturada_de_Computadores.pdf';
+                pdf_1.textContent = ('12- Organizao Estruturada de Computadores');
+                pdf_1.className = ('Quiz');
+                pdf_1.onclick = function(){
+                    donwload_1.click();
+                }
+                tela.appendChild(pdf_1);
+            })
+        });
+    });
+
+    </script>
+    <a href="{% url 'home' %}"><button class="rotas">Inicio</button></a>
+    <div class="escolhas" >
+        <div class="tela">
+            <h1>Introdução a Computação</h1>
+            <hr>
+            <button id="prova_1">Prova 1</button>
+            <button id="prova_2">Prova 2</button>
+            <button id="prova_3">Prova 3</button>
+        </div>
+    </div>
+</body>
+</html>

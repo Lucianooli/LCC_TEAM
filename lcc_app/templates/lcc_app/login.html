@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LCC| Login |</title>
+    <link rel="shortcut icon" href="../../static/lcc_app/images/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../static/lcc_app/css/register.css">
+</head>
+<body>
+    <div class="start">
+        <a href="{% url 'home' %}">
+            <h1 class="title_1">LCC: Reforço e Diversão</h1>
+        </a>
+        <a href="{% url 'register' %}"><button class="login">Registrar</button></a>
+       
+    </div>
+    <div class="card">
+        <h1 class="title_2">Entrar</h1>
+        <form method="post" class="formulario">
+            {% csrf_token %}
+            {% for field in form %}
+                <div class="form-group">
+                    <div class="texto_forms">
+                        {{ field.label_tag }}
+                    </div> 
+                    <div class="campos_forms">
+                        {{ field }}
+                    </div>
+
+                    {% if field.errors %}
+                        <div class="error">{{ field.errors }}</div>
+                    {% endif %}
+                </div>
+            {% endfor %}
+            <div class="campo_bt">
+                <button class="botao_register"  type="submit">Entrar</button>
+            </div>
+           
+        </form>
+    </div>
+
+</body>
+</html>

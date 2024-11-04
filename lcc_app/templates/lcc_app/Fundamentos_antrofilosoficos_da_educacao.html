@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LCC| Introdução a Computação |</title>
+    <link rel="shortcut icon" href="../../static/lcc_app/images/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../static/lcc_app/css/antropologia.css">
+</head>
+<body>
+    <script>
+        document.addEventListener('DOMContentLoaded',function(){
+            const videoaulas = document.getElementById('prova_1');
+            const pdfs = document.getElementById('prova_2');
+            const tela = document.getElementsByClassName('tela')[0];
+            videoaulas.addEventListener("click",function(){
+                tela.innerHTML =  '';
+                const videoaulas_1 = document.createElement('iframe');
+                videoaulas_1.src = ('https://www.youtube.com/embed/864LgALHscI?si=PSaleIh64tjplooy');
+                videoaulas_1.controls = true;
+                videoaulas_1.width = 640;
+                videoaulas_1.height = 360;
+                videoaulas_1.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'; // Permissões
+                videoaulas_1.allowFullscreen = true; // Permite que o vídeo seja exibido em tela cheia
+                tela.appendChild(videoaulas_1);
+            })
+            pdfs.addEventListener('click',function(){
+                tela.innerHTML = '';
+                const arquivos = document.getElementById('arquivos');
+                const pdf_0 = document.createElement('button');
+                const donwload_0 = document.createElement('a');
+                donwload_0.href = '{{ pdf_0.arquivo.url }}';  
+                donwload_0.download = '{{ pdf_0.nome  }}';
+                pdf_0.textContent = ('O que é educação ');
+                pdf_0.className = ('Quiz');
+                pdf_0.onclick = function(){
+                    donwload_0.click();
+                }
+                
+                const pdf_1 = document.createElement('button');
+                const donwload_1 = document.createElement('a');
+                donwload_1.href = '{{ pdf_1.arquivo.url }}';  
+                donwload_1.download = '{{ pdf_1.nome  }}';
+                pdf_1.textContent = ('Antropologia estudos culturais');
+                pdf_1.className = ('Quiz');
+                pdf_1.onclick = function(){
+                    donwload_1.click();
+                }
+
+                tela.appendChild(pdf_0);
+                tela.appendChild(pdf_1);
+            })
+        })
+    </script>
+
+    <a href="{% url 'home' %}"><button class="rotas">Inicio</button></a>
+    <div class="escolhas" >
+        <div class="tela">
+            <h1>Fundamentos Antrofilosóficos da Educação</h1>
+            <hr>
+            <button id="prova_1">Video Aulas</button>
+            <button id="prova_2">PDFS</button>
+        </div>
+    </div>
+</body>
+</html>
+</body>
+</html>
