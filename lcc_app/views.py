@@ -96,3 +96,8 @@ def Calculo_1(request):
     
     return render(request,'lcc_app/calculo_1.html',{'pdf_1':pdf_1,'pdf_2':pdf_2,'pdf_3':pdf_3,'pdf_4':pdf_4,'desafio_1':desafio_1,'desafio_2':desafio_2,'desafio_3':desafio_3,
     'pdf_5':pdf_5,'pdf_6':pdf_6,'pdf_7':pdf_7,'pdf_8':pdf_8,'pdf_9':pdf_9,'pdf_10':pdf_10,'desafio_4':desafio_4,'desafio_5':desafio_5, 'pdf_11':pdf_11, 'desafio_6':desafio_6})
+
+def Matematica_Discreta(request):
+    pdf_1 = Pdf.objects.get(id=22)
+    desafio_1 = Desafio.objects.get(id=8)
+    return render(request,'lcc_app/matematica_discreta.html',{'pdf_1':pdf_1,'desafio_1':desafio_1})

@@ -14,6 +14,7 @@ urlpatterns = [
     path('Fundamento_antrofilofico/', views.Fundamentos_antrofilosoficos_da_educacao, name='fundamento_antro'),
     path('Metologia_cientifica/',views.Metodologia_cientifica, name='Metologia_cientifica'),
     path('calculo_1/', views.Calculo_1, name='calculo_1'),
+    path('Matematica_Discreta', views.Matematica_Discreta, name='Matematica_discreta')
 
 ]
 
