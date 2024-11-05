@@ -1,0 +1,55 @@
+# Django
+*.pyc
+__pycache__/
+db.sqlite3
+/media
+/staticfiles
+*.log
+
+# Configurações de ambiente
+.env
+*.env
+
+# Arquivos de teste
+coverage.xml
+*.cover
+*.coverage
+.coverage.*
+nosetests.xml
+test.xml
+*.mo
+*.pot
+
+# Arquivos do editor
+*.swp
+*.swo
+*.sublime-workspace
+*.sublime-project
+.idea/
+.vscode/
+*.code-workspace
+
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Compiled JavaScript
+/dist
+/build
+
+# Backup
+*~ 
+*.bak
+
+# Python
+*.py[cod]
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Documentos e artefatos gerados
+*.pdf
+*.docx
+*.xlsx
+*.pptx

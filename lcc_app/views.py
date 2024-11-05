@@ -75,8 +75,24 @@ def Calculo_1(request):
     pdf_2 = Pdf.objects.get(id=12)
     pdf_3 = Pdf.objects.get(id=13)
     pdf_4 = Pdf.objects.get(id=14)
+
+    pdf_5 = Pdf.objects.get(id=15)
+    pdf_6 = Pdf.objects.get(id=16)
+    pdf_7 = Pdf.objects.get(id=17)
+    pdf_8 = Pdf.objects.get(id=18)
+    pdf_9 = Pdf.objects.get(id=19)
+    pdf_10 = Pdf.objects.get(id=20)
+
     desafio_1 = Desafio.objects.get(id=2)
     desafio_2 = Desafio.objects.get(id=3)
     desafio_3 = Desafio.objects.get(id=4)
+    desafio_4 = Desafio.objects.get(id=5)
+    desafio_5 = Desafio.objects.get(id=6)
+
+    pdf_11 = Pdf.objects.get(id=21)
+
+    desafio_6 = Desafio.objects.get(id=7)
+
     
-    return render(request,'lcc_app/calculo_1.html',{'pdf_1':pdf_1,'pdf_2':pdf_2,'pdf_3':pdf_3,'pdf_4':pdf_4,'desafio_1':desafio_1,'desafio_2':desafio_2,'desafio_3':desafio_3})
+    return render(request,'lcc_app/calculo_1.html',{'pdf_1':pdf_1,'pdf_2':pdf_2,'pdf_3':pdf_3,'pdf_4':pdf_4,'desafio_1':desafio_1,'desafio_2':desafio_2,'desafio_3':desafio_3,
+    'pdf_5':pdf_5,'pdf_6':pdf_6,'pdf_7':pdf_7,'pdf_8':pdf_8,'pdf_9':pdf_9,'pdf_10':pdf_10,'desafio_4':desafio_4,'desafio_5':desafio_5, 'pdf_11':pdf_11, 'desafio_6':desafio_6})

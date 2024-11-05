@@ -202,9 +202,251 @@
 
                     arquivos.addEventListener('click',function(){
                         tela.innerHTML = '';
-                        
+                    const arquivos = document.getElementById('arquivos');
+                    const pdf_1 = document.createElement('button');
+                    const donwload_1 = document.createElement('a');
+                    donwload_1.href = '{{ pdf_5.arquivo.url }}';  
+                    donwload_1.download = '{{ pdf_5.nome  }}';
+                    pdf_1.textContent = ('{{ pdf_5.nome }}');
+                    pdf_1.className = ('Quiz');
+                    pdf_1.onclick = function(){
+                        donwload_1.click();
+                }
+                const pdf_2 = document.createElement('button');
+                const donwload_2 = document.createElement('a');
+                donwload_2.href = '{{ pdf_6.arquivo.url }}';  
+                donwload_2.download = '{{ pdf_6.nome  }}';
+                pdf_2.textContent = ('{{ pdf_6.nome }}');
+                pdf_2.className = ('Quiz');
+                pdf_2.onclick = function(){
+                    donwload_2.click();
+                }
+
+                const pdf_3 = document.createElement('button');
+                const donwload_3 = document.createElement('a');
+                donwload_3.href = '{{ pdf_7.arquivo.url }}';  
+                donwload_3.download = '{{ pdf_7.nome  }}';
+                pdf_3.textContent = ('{{ pdf_7.nome }}');
+                pdf_3.className = ('Quiz');
+                pdf_3.onclick = function(){
+                    donwload_3.click();
+                }
+
+                const pdf_4 = document.createElement('button');
+                const donwload_4 = document.createElement('a');
+                donwload_4.href = '{{ pdf_8.arquivo.url }}';  
+                donwload_4.download = '{{ pdf_8.nome  }}';
+                pdf_4.textContent = ('{{ pdf_8.nome }}');
+                pdf_4.className = ('Quiz');
+                pdf_4.onclick = function(){
+                    donwload_4.click();
+                }
+
+                const pdf_5 = document.createElement('button');
+                const donwload_5 = document.createElement('a');
+                donwload_5.href = '{{ pdf_9.arquivo.url }}';  
+                donwload_5.download = '{{ pdf_9.nome  }}';
+                pdf_5.textContent = ('{{ pdf_9.nome }}');
+                pdf_5.className = ('Quiz');
+                pdf_5.onclick = function(){
+                    donwload_5.click();
+                }
+                const pdf_6 = document.createElement('button');
+                const donwload_6 = document.createElement('a');
+                donwload_6.href = '{{ pdf_10.arquivo.url }}';  
+                donwload_6.download = '{{ pdf_10.nome  }}';
+                pdf_6.textContent = ('{{ pdf_10.nome }}');
+                pdf_6.className = ('Quiz');
+                pdf_6.onclick = function(){
+                    donwload_6.click();
+                }
+                tela.appendChild(pdf_1);
+                tela.appendChild(pdf_2);
+                tela.appendChild(pdf_3);
+                tela.appendChild(pdf_4);
+                tela.appendChild(pdf_5);
+                tela.appendChild(pdf_6);
+
                     })
+                desafios.addEventListener('click',function(){
+                    tela.innerHTML ='';
+                    const arquivos = document.getElementById('arquivos');
+                    const desafio_1 = document.createElement('button');
+                    const donwload_1 = document.createElement('a');
+                    donwload_1.href = '{{ desafio_4.arquivo.url }}';  
+                    donwload_1.download = '{{ desafio_4.nome  }}';
+                    desafio_1.textContent = ('{{ desafio_4.nome }}');
+                    desafio_1.className = ('Quiz');
+                    desafio_1.onclick = function(){
+                        donwload_1.click();
+                    }
+
+                    const desafio_2 = document.createElement('button');
+                    const donwload_2 = document.createElement('a');
+                    donwload_2.href = '{{ desafio_5.arquivo.url }}';  
+                    donwload_2.download = '{{ desafio_5.nome  }}';
+                    desafio_2.textContent = ('{{ desafio_5.nome }}');
+                    desafio_2.className = ('Quiz');
+                    desafio_2.onclick = function(){
+                        donwload_2.click();
+                    }
+
+                    tela.appendChild(desafio_1);
+                    tela.appendChild(desafio_2);
+                    
                 })
+                videoaulas.addEventListener('click',function(){
+                    tela.innerHTML= '';
+                    const videoaulas_1 = document.createElement('iframe');
+                    const videoaulas_2 = document.createElement('iframe');
+                    const videoaulas_3 = document.createElement('iframe');
+                    const videoaulas_4 = document.createElement('iframe');
+                    const videoaulas_5 = document.createElement('iframe');
+
+                    videoaulas_1.src = ('https://www.youtube.com/embed/v-VYli2XQo0?si=uzlMHaYZQrPMYomK');
+                    videoaulas_1.controls = true;
+                    videoaulas_1.width = 640;
+                    videoaulas_1.height = 360;
+                    videoaulas_1.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'; // Permissões
+                    videoaulas_1.allowFullscreen = true; // Permite que o vídeo seja exibido em tela cheia
+
+                    videoaulas_2.src = ('https://www.youtube.com/embed/IG212G5rdbo?si=0I9fOFoIpjwBKQJe');
+                    videoaulas_2.controls = true;
+                    videoaulas_2.width = 640;
+                    videoaulas_2.height = 360;
+                    videoaulas_2.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'; // Permissões
+                    videoaulas_2.allowFullscreen = true; // Permite que o vídeo seja exibido em tela cheia
+
+                    videoaulas_3.src = ('https://www.youtube.com/embed/Jn_uvs8IXI8?si=vxD4e_3t5AgNq17-');
+                    videoaulas_3.controls = true;
+                    videoaulas_3.width = 640;
+                    videoaulas_3.height = 360;
+                    videoaulas_3.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'; // Permissões
+                    videoaulas_3.allowFullscreen = true; // Permite que o vídeo seja exibido em tela cheia
+                    
+                    videoaulas_4.src = ('https://www.youtube.com/embed/6QVgJC42v94?si=UAeBreCx-lUYEF-4');
+                    videoaulas_4.controls = true;
+                    videoaulas_4.width = 640;
+                    videoaulas_4.height = 360;
+                    videoaulas_4.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'; // Permissões
+                    videoaulas_4.allowFullscreen = true; // Permite que o vídeo seja exibido em tela cheia
+
+                    videoaulas_5.src = ('https://www.youtube.com/embed/cHgeg0fzbRU?si=kGHxNGMS_Ot3awOe');
+                    videoaulas_5.controls = true;
+                    videoaulas_5.width = 640;
+                    videoaulas_5.height = 360;
+                    videoaulas_5.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'; // Permissões
+                    videoaulas_5.allowFullscreen = true; // Permite que o vídeo seja exibido em tela cheia
+
+                    tela.appendChild(videoaulas_1);
+                    tela.appendChild(videoaulas_2);
+                    tela.appendChild(videoaulas_3);
+                    tela.appendChild(videoaulas_4);
+                    tela.appendChild(videoaulas_5);
+                })
+                })
+            prova_3.addEventListener('click',function(){
+                tela.innerHTML='';
+                const titulo = document.createElement('h1');
+                const listra = document.createElement('hr');
+                const arquivos  = document.createElement('button');
+                const videoaulas =  document.createElement('button');
+                const desafios = document.createElement('button');
+
+                desafios.textContent = 'Desafios';
+                desafios.className = 'Quiz';
+                arquivos.textContent = 'Matérias em PDF';
+                arquivos.className = 'Quiz';
+                videoaulas.textContent = 'Video-Aulas';
+                videoaulas.classList = 'Quiz';
+                titulo.textContent = 'Calculo 1';
+                titulo.className = 'Titulo';
+
+
+                tela.appendChild(titulo);
+                tela.appendChild(listra);
+                tela.appendChild(arquivos);
+                tela.appendChild(desafios);
+                tela.appendChild(videoaulas);
+
+                arquivos.addEventListener('click',function(){
+                    tela.innerHTML='';
+                    const arquivos = document.getElementById('arquivos');
+                    const pdf_1 = document.createElement('button');
+                    const donwload_1 = document.createElement('a');
+                    donwload_1.href = '{{ pdf_11.arquivo.url }}';  
+                    donwload_1.download = '{{ pdf_11.nome  }}';
+                    pdf_1.textContent = ('{{ pdf_11.nome }}');
+                    pdf_1.className = ('Quiz');
+                    pdf_1.onclick = function(){
+                        donwload_1.click();
+                }
+                    tela.appendChild(pdf_1);
+                })
+                desafios.addEventListener('click',function(){
+                    tela.innerHTML = '';
+                    const arquivos = document.getElementById('arquivos');
+                    const desafio_1 = document.createElement('button');
+                    const donwload_1 = document.createElement('a');
+                    donwload_1.href = '{{ desafio_6.arquivo.url }}';  
+                    donwload_1.download = '{{ desafio_6.nome  }}';
+                    desafio_1.textContent = ('{{ desafio_6.nome }}');
+                    desafio_1.className = ('Quiz');
+                    desafio_1.onclick = function(){
+                        donwload_1.click();
+                    }
+                    tela.appendChild(desafio_1);
+                })
+                videoaulas.addEventListener('click',function(){
+                    tela.innerHTML = '';
+                    const videoaulas_1 = document.createElement('iframe');
+                    const videoaulas_2 = document.createElement('iframe');
+                    const videoaulas_3 = document.createElement('iframe');
+                    const videoaulas_4 = document.createElement('iframe');
+                    const videoaulas_5 = document.createElement('iframe');
+
+                    videoaulas_1.src = ('https://www.youtube.com/embed/s9OuXAQeM0U?si=-SJilKcjv17_DD9M');
+                    videoaulas_1.controls = true;
+                    videoaulas_1.width = 640;
+                    videoaulas_1.height = 360;
+                    videoaulas_1.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'; // Permissões
+                    videoaulas_1.allowFullscreen = true; // Permite que o vídeo seja exibido em tela cheia
+
+                    videoaulas_2.src = ('https://www.youtube.com/embed/9Ac6t61f7XY?si=_yyDRe44UYcsTZz6');
+                    videoaulas_2.controls = true;
+                    videoaulas_2.width = 640;
+                    videoaulas_2.height = 360;
+                    videoaulas_2.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'; // Permissões
+                    videoaulas_2.allowFullscreen = true; // Permite que o vídeo seja exibido em tela cheia
+
+                    videoaulas_3.src = ('https://www.youtube.com/embed/zrrgc1JAo6s?si=PusRfcf8d3GTWKud');
+                    videoaulas_3.controls = true;
+                    videoaulas_3.width = 640;
+                    videoaulas_3.height = 360;
+                    videoaulas_3.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'; // Permissões
+                    videoaulas_3.allowFullscreen = true; // Permite que o vídeo seja exibido em tela cheia
+                    
+                    videoaulas_4.src = ('https://www.youtube.com/embed/Gec8owlmlcw?si=MG6ikZ_RJ0z4v2yw');
+                    videoaulas_4.controls = true;
+                    videoaulas_4.width = 640;
+                    videoaulas_4.height = 360;
+                    videoaulas_4.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'; // Permissões
+                    videoaulas_4.allowFullscreen = true; // Permite que o vídeo seja exibido em tela cheia
+
+                    videoaulas_5.src = ('https://www.youtube.com/embed/j4AfT341aBY?si=w47y0cB-wuutxCrb');
+                    videoaulas_5.controls = true;
+                    videoaulas_5.width = 640;
+                    videoaulas_5.height = 360;
+                    videoaulas_5.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'; // Permissões
+                    videoaulas_5.allowFullscreen = true; // Permite que o vídeo seja exibido em tela cheia
+
+                    tela.appendChild(videoaulas_1);
+                    tela.appendChild(videoaulas_2);
+                    tela.appendChild(videoaulas_3);
+                    tela.appendChild(videoaulas_4);
+                    tela.appendChild(videoaulas_5);
+                })
+            })
         })
     </script>
 
