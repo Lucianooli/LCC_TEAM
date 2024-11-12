@@ -380,8 +380,64 @@
                 });
                 })
             })
+        prova_2.addEventListener("click",function(){
+            tela.innerHTML = '';
+            const titulo = document.createElement('h1');
+            const listra = document.createElement('hr');
+            const arquivos  = document.createElement('button');
+            const videoaulas =  document.createElement('button');
+            const desafios = document.createElement('button');
+            const Quiz = document.createElement('button');
+
+            desafios.textContent = 'Desafios';
+            desafios.className = 'Quiz';
+            arquivos.textContent = 'Matérias em PDF';
+            arquivos.className = 'Quiz';
+            videoaulas.textContent = 'Video-Aulas';
+            videoaulas.classList = 'Quiz';
+            titulo.textContent = 'Matemática Discreta';
+            titulo.className = 'Titulo';
+            Quiz.textContent = 'Quiz';
+            Quiz.getElementsByClassName = 'Quiz';
+
+            tela.appendChild(titulo);
+            tela.appendChild(listra);
+            tela.appendChild(arquivos);
+            tela.appendChild(desafios);
+            tela.appendChild(videoaulas);
+            tela.appendChild(Quiz);
+            })
+
+        prova_3.addEventListener("click",function(){
+            tela.innerHTML = '';
+            const titulo = document.createElement('h1');
+            const listra = document.createElement('hr');
+            const arquivos  = document.createElement('button');
+            const videoaulas =  document.createElement('button');
+            const desafios = document.createElement('button');
+            const Quiz = document.createElement('button');
+
+            desafios.textContent = 'Desafios';
+            desafios.className = 'Quiz';
+            arquivos.textContent = 'Matérias em PDF';
+            arquivos.className = 'Quiz';
+            videoaulas.textContent = 'Video-Aulas';
+            videoaulas.classList = 'Quiz';
+            titulo.textContent = 'Matemática Discreta';
+            titulo.className = 'Titulo';
+            Quiz.textContent = 'Quiz';
+            Quiz.getElementsByClassName = 'Quiz';
+
+            tela.appendChild(titulo);
+            tela.appendChild(listra);
+            tela.appendChild(arquivos);
+            tela.appendChild(desafios);
+            tela.appendChild(videoaulas);
+            tela.appendChild(Quiz);
+            })
         })
         //Fazer parte dois
+
     </script>
     
         <a href="{% url 'home' %}"><button class="rotas">Inicio</button></a>

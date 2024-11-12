@@ -101,3 +101,9 @@ def Matematica_Discreta(request):
     pdf_1 = Pdf.objects.get(id=22)
     desafio_1 = Desafio.objects.get(id=8)
     return render(request,'lcc_app/matematica_discreta.html',{'pdf_1':pdf_1,'desafio_1':desafio_1})
+def Introducao_programacao(request):
+    pdf_1 = Pdf.objects.get(id=23)
+    pdf_2 = Pdf.objects.get(id=24)
+    desafio_1 = Desafio.objects.get(id=9)
+    desafio_2 = Desafio.objects.get(id=10)
+    return render(request,'lcc_app/introducao_programacao.html',{"pdf_1":pdf_1,"desafio_1":desafio_1,"pdf_2":pdf_2,"desafio_2":desafio_2,})

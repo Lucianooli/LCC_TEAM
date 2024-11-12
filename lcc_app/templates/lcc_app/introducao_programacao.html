@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LCC| Introdução A Programação |</title>
+    <link rel="shortcut icon" href="../../static/lcc_app/images/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../static/lcc_app/css/matematica_discreta.css">
+</head>
+<body>
+    <script>
+        document.addEventListener("DOMContentLoaded",function(){
+            
+            const prova_1 = document.getElementById('prova_1');
+            const prova_2 = document.getElementById('prova_2');
+            const prova_3 = document.getElementById('prova_3');
+            const tela = document.getElementsByClassName('tela')[0];
+            let perguntas_erradas = [] ;
+            let total_perguntas = 10;  
+            let acertos = 0;
+
+            prova_1.addEventListener("click",function(){
+                tela.innerHTML = '';
+                const titulo = document.createElement('h1');
+                const listra = document.createElement('hr');
+                const arquivos  = document.createElement('button');
+                const videoaulas =  document.createElement('button');
+                const desafios = document.createElement('button');
+                const Quiz = document.createElement('button');
+
+                desafios.textContent = 'Desafios';
+                desafios.className = 'Quiz';
+                arquivos.textContent = 'Matérias em PDF';
+                arquivos.className = 'Quiz';
+                videoaulas.textContent = 'Video-Aulas';
+                videoaulas.classList = 'Quiz';
+                titulo.textContent = 'Introdução a Programação';
+                titulo.className = 'Titulo';
+                Quiz.textContent = 'Quiz';
+                Quiz.getElementsByClassName = 'Quiz';
+
+                tela.appendChild(titulo);
+                tela.appendChild(listra);
+                tela.appendChild(arquivos);
+                tela.appendChild(desafios);
+                tela.appendChild(videoaulas);
+                tela.appendChild(Quiz);
+
+                arquivos.addEventListener("click",function(){
+                    tela.innerHTML = '';
+                    const arquivos = document.getElementById('arquivos');
+                    const pdf_1 = document.createElement('button');
+                    const donwload_1 = document.createElement('a');
+                    const pdf_2 = document.createElement('button');
+                    const donwload_2 = document.createElement('a');
+                    const pdf_3 = document.createElement('button');
+                    const donwload_3 = document.createElement('a');
+
+                    donwload_1.href = '{{ pdf_1.arquivo.url }}';  
+                    donwload_1.download = '{{ pdf_1.nome  }}';
+                    pdf_1.textContent = ('{{ pdf_1.nome }}');
+                    pdf_1.className = ('Quiz');
+                    pdf_1.onclick = function(){
+                        donwload_1.click();
+                    }
+
+                    tela.appendChild(pdf_1);
+                })
+                desafios.addEventListener("click",function(){
+                    tela.innerHTML = '';
+                    const arquivos = document.getElementById('arquivos');
+                    const desafio_1 = document.createElement('button');
+                    const donwload_1 = document.createElement('a');
+                    donwload_1.href = '{{ desafio_1.arquivo.url }}';  
+                    donwload_1.download = '{{ desafio_1.nome  }}';
+                    desafio_1.textContent = ('{{ desafio_1.nome }}');
+                    desafio_1.className = ('Quiz');
+                    desafio_1.onclick = function(){
+                        donwload_1.click();
+                    }
+                    tela.appendChild(desafio_1);
+                })
+                videoaulas.addEventListener("click",function(){
+                    tela.innerHTML = "";
+                    const videoaulas_1 = document.createElement('iframe');
+                    const videoaulas_2 = document.createElement('iframe');
+                    const videoaulas_3 = document.createElement('iframe');
+                    const videoaulas_4 = document.createElement('iframe');
+                    const videoaulas_5 = document.createElement('iframe');
+
+                    videoaulas_1.src = ('https://www.youtube.com/embed/hdDHg1p3YVc?si=1qxdcpAsJmipjimx');
+                    videoaulas_1.controls = true;
+                    videoaulas_1.width = 640;
+                    videoaulas_1.height = 360;
+                    videoaulas_1.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'; // Permissões
+                    videoaulas_1.allowFullscreen = true; // Permite que o vídeo seja exibido em tela cheia
+
+                    videoaulas_2.src = ('https://www.youtube.com/embed/hdDHg1p3YVc?si=3OA9t34wZElqIneE');
+                    videoaulas_2.controls = true;
+                    videoaulas_2.width = 640;
+                    videoaulas_2.height = 360;
+                    videoaulas_2.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'; // Permissões
+                    videoaulas_2.allowFullscreen = true; // Permite que o vídeo seja exibido em tela cheia
+
+                    videoaulas_3.src = ('https://www.youtube.com/embed/PB254Cfjlyk?si=aFF5eGRrCta8qZrs');
+                    videoaulas_3.controls = true;
+                    videoaulas_3.width = 640;
+                    videoaulas_3.height = 360;
+                    videoaulas_3.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'; // Permissões
+                    videoaulas_3.allowFullscreen = true; // Permite que o vídeo seja exibido em tela cheia
+                    
+                    videoaulas_4.src = ('https://www.youtube.com/embed/tHYxjJxtJko?si=oRJbdPgcr0GEmBrE');
+                    videoaulas_4.controls = true;
+                    videoaulas_4.width = 640;
+                    videoaulas_4.height = 360;
+                    videoaulas_4.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'; // Permissões
+                    videoaulas_4.allowFullscreen = true; // Permite que o vídeo seja exibido em tela cheia
+
+                    videoaulas_5.src = ('https://www.youtube.com/embed/K10u3XIf1-Q?si=iFHEhXNapKplmN3S');
+                    videoaulas_5.controls = true;
+                    videoaulas_5.width = 640;
+                    videoaulas_5.height = 360;
+                    videoaulas_5.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'; // Permissões
+                    videoaulas_5.allowFullscreen = true; // Permite que o vídeo seja exibido em tela cheia
+
+                    tela.appendChild(videoaulas_1);
+                    tela.appendChild(videoaulas_2);
+                    tela.appendChild(videoaulas_3);
+                    tela.appendChild(videoaulas_4);
+                    tela.appendChild(videoaulas_5);
+                })
+                Quiz.addEventListener("click",function(){
+                    tela.innerHTML = '';
+                    const iniciar = document.createElement('button');
+                const Jogo = document.createElement('h1');
+                const hr = document.createElement('hr');
+
+                Jogo.textContent = 'Perguntas e Respostas';
+                Jogo.className = 'Titulo';
+                iniciar.textContent = 'Iniciar';
+                iniciar.classList = 'Quiz';
+                tela.appendChild(Jogo);
+                tela.appendChild(hr);
+                tela.appendChild(iniciar);
+
+                iniciar.addEventListener('click', function() {
+
+                    let perguntaAtual = 0;
+                    const perguntas = [
+                        {
+                            pergunta: '1 - Qual é o comando usado para declarar uma variável em Python?',
+                            opcoes: [
+                                'var x = 10',
+                                'int x = 10',
+                                'x = 10',
+                                'declare x = 10'
+                            ],
+                            resposta_correta: 2 // A primeira opção é a correta
+                        },
+                        {
+                            pergunta: '2 – Qual dessas variáveis é uma string em Python?',
+                            opcoes: [
+                                'nome = "Python"',
+                                'nome = 5',
+                                'nome = True',
+                                'nome = 3.14'
+                            ],
+                            resposta_correta: 0 // A terceira opção é a correta
+                        },
+                        {
+                            pergunta: '3 - Como você verifica se a variável x é maior que 10 em Python',
+                            opcoes: [
+                                'if x > 10',
+                                'if x >= 10',
+                                'if x < 10',
+                                'if x == 10'
+                            ],
+                            resposta_correta: 0
+
+                        },
+                        {
+                            pergunta: '4 – Qual das opções abaixo é usada para formatar uma string com variáveis em Python 3.6+?',
+                            opcoes:[
+                                '"O valor é {}".format(valor)',
+                                '"O valor é {valor}"',
+                                '"O valor é" + valor',
+                                'f"O valor é {valor}"',
+                            ],
+                            resposta_correta: 3
+
+                        },
+                        {
+                            pergunta: '5 – Qual dessas expressões verifica se a variável a é menor ou igual a b?',
+                            opcoes:[
+                                'if a > b',
+                                'if a == b',
+                                'if a <= b',
+                                'if a < b'
+                            ],
+                            resposta_correta: 2
+                        },
+                        {
+                            pergunta: '6 – Como você declara uma variável de múltiplas palavras usando o estilo de nomeação "snake_case" em Python?',
+                            opcoes:[
+                                'multi_word_variable = 5',
+                                'multiWordVariable = 5',
+                                'MultiWordVariable = 5',
+                                'multi_word-variable = 5'
+                            ],
+                            resposta_correta: 0
+                        },
+                        {
+                            pergunta: '7 – Qual das seguintes é uma declaração condicional correta em Python para verificar igualdade?',
+                            opcoes:[
+                                'if x = 10',
+                                'if x == 10',
+                                'if x != 10',
+                                'if x === 10'
+                            ],
+                            resposta_correta:1
+                        },
+                        {
+                            pergunta:'8 – Qual função é usada para converter uma variável para string em Python?',
+                            opcoes: [
+                                'to_string()',
+                                'str()',
+                                'convert()',
+                                'string()'
+                            ],
+                            resposta_correta:1
+                        },
+                        {
+                            pergunta: '9 – Qual dessas expressões adiciona 2 ao valor da variável x em Python?',
+                            opcoes: [
+                                'x + 2',
+                                'x += 2',
+                                'x == 2',
+                                'x = x - 2'
+                            ],
+                            resposta_correta:1
+                        },
+                        {
+                            pergunta:'10 – Qual das opções a seguir formata uma string com duas casas decimais em Python?',
+                            opcoes:[
+                                '"Valor: {:.2}".format(valor)',
+                                '"Valor: {:.2f}".format(valor)',
+                                '"Valor: {:2f}".format(valor)',
+                                '"Valor: {:.2d}".format(valor)'
+                            ],
+                            resposta_correta:1
+                        },
+                      
+                        // Adicione mais perguntas aqui
+                    ];
+                    function mostrarPergunta(index) {
+                        tela.innerHTML = '';
+
+                        const Pergunta = document.createElement('h1');
+                        const hr = document.createElement('hr');
+                        Pergunta.className = 'Titulo2';
+                        Pergunta.textContent = perguntas[index].pergunta;
+
+                        const opcao_1 = document.createElement('button');
+                        const opcao_2 = document.createElement('button');
+                        const opcao_3 = document.createElement('button');
+                        const opcao_4 = document.createElement('button');
+
+                        opcao_1.textContent = perguntas[index].opcoes[0];
+                        opcao_2.textContent = perguntas[index].opcoes[1];
+                        opcao_3.textContent = perguntas[index].opcoes[2];
+                        opcao_4.textContent = perguntas[index].opcoes[3];
+
+                        opcao_1.className = 'Quiz';
+                        opcao_2.className = 'Quiz';
+                        opcao_3.className = 'Quiz';
+                        opcao_4.className = 'Quiz';
+
+
+
+                        tela.appendChild(Pergunta);
+                        tela.appendChild(hr);
+                        tela.appendChild(opcao_1);
+                        tela.appendChild(opcao_2);
+                        tela.appendChild(opcao_3);
+                        tela.appendChild(opcao_4);
+
+                        function verificarResposta(opcao) {
+                            if (opcao === perguntas[index].resposta_correta) {
+                                alert('Resposta correta!');
+                                acertos += 1; // Adiciona 1 ponto por resposta correta
+
+                            } else {
+                                alert('Resposta incorreta!');
+                                perguntas_erradas.push(perguntaAtual)
+                            }
+                            perguntaAtual++;
+                            if (perguntaAtual < perguntas.length) {
+                                mostrarPergunta(perguntaAtual); // Mostra a próxima pergunta
+                            } else {
+                                alert('Quiz finalizado!');
+                                tela.innerHTML='';
+                                let erros = (total_perguntas - acertos);
+                                let media = (acertos / total_perguntas) * 100;
+                                const resultadoFinal = document.createElement('div');
+                                const Pontuação_final = document.createElement('h1');
+                                const Pontuação_final_span_1 = document.createElement('span');
+                                const Pontuação_final_span_2 = document.createElement('span');
+                                Pontuação_final_span_1.className = ('resultado_2');
+                                Pontuação_final_span_2.className = ('valor');
+                                Pontuação_final_span_1.textContent = ('Pontuação final: ')
+                                Pontuação_final_span_2.textContent = (`${Math.round(media)}%`)
+                                Pontuação_final.appendChild(Pontuação_final_span_1);
+                                Pontuação_final.appendChild(Pontuação_final_span_2);
+
+                                const total_perguntas_acertadas = document.createElement('h1');
+                                const total_perguntas_acertadas_span_1 = document.createElement('span');
+                                const total_perguntas_acertadas_span_2 = document.createElement('span');
+                                total_perguntas_acertadas_span_1.className = ('resultado_2');
+                                total_perguntas_acertadas_span_2.className = ('valor');
+                                total_perguntas_acertadas_span_1.textContent = ('Total de perguntas acertadas: ')
+                                total_perguntas_acertadas_span_2.textContent = (`${acertos}`);
+                                total_perguntas_acertadas.appendChild(total_perguntas_acertadas_span_1);
+                                total_perguntas_acertadas.appendChild(total_perguntas_acertadas_span_2);
+
+                                const total_perguntas_erradas = document.createElement('h1');
+                                const total_perguntas_erradas_span_1 = document.createElement('span');
+                                const total_perguntas_erradas_span_2 = document.createElement('span');
+                                total_perguntas_erradas_span_1.className = ('resultado_2');
+                                total_perguntas_erradas_span_2.className = ('valor');
+                                total_perguntas_erradas_span_1.textContent = ('total de perguntas erradas: ')
+                                total_perguntas_erradas_span_2.textContent = (` ${erros} `)
+                                total_perguntas_erradas.appendChild(total_perguntas_erradas_span_1);
+                                total_perguntas_erradas.appendChild(total_perguntas_erradas_span_2);
+
+                                const lista_de_perguntas_erradas = document.createElement('h1');
+                                const lista_de_perguntas_erradas_span_1 = document.createElement('span');
+                                const lista_de_perguntas_erradas_span_2 = document.createElement('span');
+                                lista_de_perguntas_erradas_span_1.className = ('resultado_2');
+                                lista_de_perguntas_erradas_span_2.className = ('valor');
+                                lista_de_perguntas_erradas_span_1.textContent = ('Questões erradas: ');
+                                lista_de_perguntas_erradas_span_2.textContent = (`${perguntas_erradas}`);
+                                lista_de_perguntas_erradas.appendChild(lista_de_perguntas_erradas_span_1);
+                                lista_de_perguntas_erradas.appendChild(lista_de_perguntas_erradas_span_2);
+                                const final = document.createElement('h1');
+                                const hr_1 = document.createElement('hr');
+                                const hr_2 = document.createElement('hr');
+                                
+
+
+                                final.textContent = ('Quiz Finalizado')
+                                final.className = ('resultado_1')
+                                resultadoFinal.className = ('resultado_final');
+
+                                resultadoFinal.appendChild(final)
+                                resultadoFinal.appendChild(Pontuação_final);
+                                resultadoFinal.appendChild(hr_1)
+                                resultadoFinal.appendChild(total_perguntas_acertadas);
+                                resultadoFinal.appendChild(hr_2)
+                                resultadoFinal.appendChild(total_perguntas_erradas);
+                                resultadoFinal.appendChild(hr)
+                                resultadoFinal.appendChild(lista_de_perguntas_erradas);
+
+                                tela.appendChild(resultadoFinal);
+
+                                // Você pode adicionar lógica para mostrar o resultado final aqui.
+                            }
+                        }
+
+
+                        // Adicionando eventos de clique para verificar a resposta
+                        opcao_1.addEventListener('click', function() {
+                            verificarResposta(0);
+                        });
+                        opcao_2.addEventListener('click', function() {
+                            verificarResposta(1);
+                        });
+                        opcao_3.addEventListener('click', function() {
+                            verificarResposta(2);
+                        });
+                        opcao_4.addEventListener('click', function() {
+                            verificarResposta(3);
+                        });
+                    }
+
+                    mostrarPergunta(perguntaAtual); // Mostra a primeira pergunta
+                });
+                })
+                })
+                prova_2.addEventListener("click",function(){
+                    tela.innerHTML = '';
+                    const titulo = document.createElement('h1');
+                const listra = document.createElement('hr');
+                const arquivos  = document.createElement('button');
+                const videoaulas =  document.createElement('button');
+                const desafios = document.createElement('button');
+                const Quiz = document.createElement('button');
+
+                desafios.textContent = 'Desafios';
+                desafios.className = 'Quiz';
+                arquivos.textContent = 'Matérias em PDF';
+                arquivos.className = 'Quiz';
+                videoaulas.textContent = 'Video-Aulas';
+                videoaulas.classList = 'Quiz';
+                titulo.textContent = 'Introdução a Programação';
+                titulo.className = 'Titulo';
+                Quiz.textContent = 'Quiz';
+                Quiz.getElementsByClassName = 'Quiz';
+
+                tela.appendChild(titulo);
+                tela.appendChild(listra);
+                tela.appendChild(arquivos);
+                tela.appendChild(desafios);
+                tela.appendChild(videoaulas);
+                tela.appendChild(Quiz);
+
+
+                arquivos.addEventListener("click",function(){
+                    tela.innerHTML = '';
+                    const arquivos = document.getElementById('arquivos');
+                    const pdf_2 = document.createElement('button');
+                    const donwload_2 = document.createElement('a');
+                    donwload_2.href = '{{ pdf_2.arquivo.url }}';  
+                    donwload_2.download = '{{ pdf_2.nome  }}';
+                    pdf_2.textContent = ('{{ pdf_2.nome }}');
+                    pdf_2.className = ('Quiz');
+                    pdf_2.onclick = function(){
+                        donwload_2.click();
+                    }
+                    tela.appendChild(pdf_2);
+                })
+                desafios.addEventListener("click",function(){
+                    tela.innerHTML = "";
+                    const arquivos = document.getElementById('arquivos');
+                    const desafio_2 = document.createElement('button');
+                    const donwload_2 = document.createElement('a');
+                    donwload_2.href = '{{ desafio_2.arquivo.url }}';  
+                    donwload_2.download = '{{ desafio_2.nome  }}';
+                    desafio_2.textContent = ('{{ desafio_2.nome  }}');
+                    desafio_2.className = ('Quiz');
+                    desafio_2.onclick = function(){
+                        donwload_2.click();
+                    }
+                    tela.appendChild(desafio_2);
+                })
+                videoaulas.addEventListener("click",function(){
+                    tela.innerHTML = '';
+                    const videoaulas_1 = document.createElement('iframe');
+                    const videoaulas_2 = document.createElement('iframe');
+                    const videoaulas_3 = document.createElement('iframe');
+                    const videoaulas_4 = document.createElement('iframe');
+                    const videoaulas_5 = document.createElement('iframe');
+
+                    videoaulas_1.src = ('https://www.youtube.com/embed/cL4YDtFnCt4?si=RjL4TtyUSlQUqQlB');
+                    videoaulas_1.controls = true;
+                    videoaulas_1.width = 640;
+                    videoaulas_1.height = 360;
+                    videoaulas_1.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'; // Permissões
+                    videoaulas_1.allowFullscreen = true; // Permite que o vídeo seja exibido em tela cheia
+
+                    videoaulas_2.src = ('https://www.youtube.com/embed/LH6OIn2lBaI?si=vuttuvjwatfuKweP');
+                    videoaulas_2.controls = true;
+                    videoaulas_2.width = 640;
+                    videoaulas_2.height = 360;
+                    videoaulas_2.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'; // Permissões
+                    videoaulas_2.allowFullscreen = true; // Permite que o vídeo seja exibido em tela cheia
+
+
+                    tela.appendChild(videoaulas_1);
+                    tela.appendChild(videoaulas_2);
+
+                })
+                Quiz.addEventListener("click",function(){
+                    tela.innerHTML = '';
+                    const iniciar = document.createElement('button');
+                const Jogo = document.createElement('h1');
+                const hr = document.createElement('hr');
+
+                Jogo.textContent = 'Perguntas e Respostas';
+                Jogo.className = 'Titulo';
+                iniciar.textContent = 'Iniciar';
+                iniciar.classList = 'Quiz';
+                tela.appendChild(Jogo);
+                tela.appendChild(hr);
+                tela.appendChild(iniciar);
+
+                iniciar.addEventListener('click', function() {
+
+                    let perguntaAtual = 0;
+                    const perguntas = [
+                        {
+                            pergunta: '1 - Qual é o propósito do loop while em Python?',
+                            opcoes: [
+                                'Executar um bloco de código enquanto uma condição for verdadeira',
+                                'Executar um bloco de código uma vez, independentemente da condição',
+                                'Executar um bloco de código para cada item de uma lista',
+                                'Encerrar um programa automaticamente após certo tempo'
+                            ],
+                            resposta_correta: 0 // A primeira opção é a correta
+                        },
+                        {
+                            pergunta: '2 – O que acontece quando uma variável x é definida como 0, e um loop while é iniciado com a condição x < 5, sendo x incrementado em 1 dentro do loop?',
+                            opcoes: [
+                                '0 1 2 3 4 5',
+                                '1 2 3 4',
+                                '0 1 2 3 4',
+                                'Esse código gera um loop infinito'
+                            ],
+                            resposta_correta: 2 // A terceira opção é a correta
+                        },
+                        {
+                            pergunta: '3 - Qual opção abaixo descreve corretamente o loop for em Python?',
+                            opcoes: [
+                                'O loop for é usado para repetir código indefinidamente enquanto uma condição é verdadeira.',
+                                'O loop for executa um bloco de código para cada item em uma sequência.',
+                                'O loop for verifica uma condição antes de cada iteração e, se for verdadeira, encerra o laço.',
+                                'O loop for só funciona com números inteiros.'
+                            ],
+                            resposta_correta: 1
+
+                        },
+                        {
+                            pergunta: '4 – Qual será a saída do seguinte código? for i in range(3):    print(i)',
+                            opcoes:[
+                                '0 1 2 3',
+                                '1 2 3',
+                                '0 1 2',
+                                'Nenhuma saída, pois range(3) está vazio',
+                            ],
+                            resposta_correta: 2
+
+                        },
+                        {
+                            pergunta: '5 – Qual é o propósito do break em loops for e while?',
+                            opcoes:[
+                                'Reiniciar o loop desde o início',
+                                'Pular a próxima iteração do loop',
+                                'Terminar o loop imediatamente',
+                                'Transformar o loop em um loop infinito'
+                            ],
+                            resposta_correta: 2
+                        },
+                        {
+                            pergunta: '6 – Em um loop while onde uma variável chamada count é incrementada até atingir o valor 5, qual seria o resultado se uma instrução break fosse inserida ao atingir o valor 3?',
+                            opcoes:[
+                                'O loop termina após exibir os valores 1 2.',
+                                'O loop exibe 1 2 3 4 5.',
+                                'O loop exibe 1 2 3.',
+                                'Esse código gera um loop infinito.'
+                            ],
+                            resposta_correta: 0
+                        },
+                        {
+                            pergunta: '7 – O que range(5, 10) produz?',
+                            opcoes:[
+                                'Uma sequência de números de 5 a 10, incluindo o 10.',
+                                'Uma sequência de números de 5 a 9.',
+                                'Uma sequência de números de 1 a 10.',
+                                'Uma sequência de números de 10 a 5.'
+                            ],
+                            resposta_correta:1
+                        },
+                        {
+                            pergunta:'8 – Qual comando for permite percorrer uma lista de trás para frente em Python?',
+                            opcoes: [
+                                'for i in lista[::-1]:',
+                                'for i in reversed(range(lista)):',
+                                'for i in range(len(lista), -1):',
+                                'for i in lista[1:]:'
+                            ],
+                            resposta_correta:0
+                        },
+                        {
+                            pergunta: '9 – Se um loop for é usado para exibir valores de 0 a 4, mas contém uma instrução continue ao atingir o valor 3, qual será a saída?',
+                            opcoes: [
+                                '0 1 2',
+                                '0 1 2 4',
+                                '0 1 2 3 4',
+                                'Nenhuma saída, pois continue termina o loop.'
+                            ],
+                            resposta_correta:1
+                        },
+                        {
+                            pergunta:'10 – Quando um loop while termina, qual comando pode ser usado para exibir uma mensagem indicando o fim do loop?',
+                            opcoes:[
+                                'print("Fim do loop") após o while.',
+                                'Usar break para exibir "Fim do loop".',
+                                'Adicionar else após o while com print("Fim do loop").',
+                                'Nenhum comando, o loop while termina automaticamente.'
+                            ],
+                            resposta_correta:2
+                        },
+                      
+                        // Adicione mais perguntas aqui
+                    ];
+                    function mostrarPergunta(index) {
+                        tela.innerHTML = '';
+
+                        const Pergunta = document.createElement('h1');
+                        const hr = document.createElement('hr');
+                        Pergunta.className = 'Titulo2';
+                        Pergunta.textContent = perguntas[index].pergunta;
+
+                        const opcao_1 = document.createElement('button');
+                        const opcao_2 = document.createElement('button');
+                        const opcao_3 = document.createElement('button');
+                        const opcao_4 = document.createElement('button');
+
+                        opcao_1.textContent = perguntas[index].opcoes[0];
+                        opcao_2.textContent = perguntas[index].opcoes[1];
+                        opcao_3.textContent = perguntas[index].opcoes[2];
+                        opcao_4.textContent = perguntas[index].opcoes[3];
+
+                        opcao_1.className = 'Quiz';
+                        opcao_2.className = 'Quiz';
+                        opcao_3.className = 'Quiz';
+                        opcao_4.className = 'Quiz';
+
+
+
+                        tela.appendChild(Pergunta);
+                        tela.appendChild(hr);
+                        tela.appendChild(opcao_1);
+                        tela.appendChild(opcao_2);
+                        tela.appendChild(opcao_3);
+                        tela.appendChild(opcao_4);
+
+                        function verificarResposta(opcao) {
+                            if (opcao === perguntas[index].resposta_correta) {
+                                alert('Resposta correta!');
+                                acertos += 1; // Adiciona 1 ponto por resposta correta
+
+                            } else {
+                                alert('Resposta incorreta!');
+                                perguntas_erradas.push(perguntaAtual)
+                            }
+                            perguntaAtual++;
+                            if (perguntaAtual < perguntas.length) {
+                                mostrarPergunta(perguntaAtual); // Mostra a próxima pergunta
+                            } else {
+                                alert('Quiz finalizado!');
+                                tela.innerHTML='';
+                                let erros = (total_perguntas - acertos);
+                                let media = (acertos / total_perguntas) * 100;
+                                const resultadoFinal = document.createElement('div');
+                                const Pontuação_final = document.createElement('h1');
+                                const Pontuação_final_span_1 = document.createElement('span');
+                                const Pontuação_final_span_2 = document.createElement('span');
+                                Pontuação_final_span_1.className = ('resultado_2');
+                                Pontuação_final_span_2.className = ('valor');
+                                Pontuação_final_span_1.textContent = ('Pontuação final: ')
+                                Pontuação_final_span_2.textContent = (`${Math.round(media)}%`)
+                                Pontuação_final.appendChild(Pontuação_final_span_1);
+                                Pontuação_final.appendChild(Pontuação_final_span_2);
+
+                                const total_perguntas_acertadas = document.createElement('h1');
+                                const total_perguntas_acertadas_span_1 = document.createElement('span');
+                                const total_perguntas_acertadas_span_2 = document.createElement('span');
+                                total_perguntas_acertadas_span_1.className = ('resultado_2');
+                                total_perguntas_acertadas_span_2.className = ('valor');
+                                total_perguntas_acertadas_span_1.textContent = ('Total de perguntas acertadas: ')
+                                total_perguntas_acertadas_span_2.textContent = (`${acertos}`);
+                                total_perguntas_acertadas.appendChild(total_perguntas_acertadas_span_1);
+                                total_perguntas_acertadas.appendChild(total_perguntas_acertadas_span_2);
+
+                                const total_perguntas_erradas = document.createElement('h1');
+                                const total_perguntas_erradas_span_1 = document.createElement('span');
+                                const total_perguntas_erradas_span_2 = document.createElement('span');
+                                total_perguntas_erradas_span_1.className = ('resultado_2');
+                                total_perguntas_erradas_span_2.className = ('valor');
+                                total_perguntas_erradas_span_1.textContent = ('total de perguntas erradas: ')
+                                total_perguntas_erradas_span_2.textContent = (` ${erros} `)
+                                total_perguntas_erradas.appendChild(total_perguntas_erradas_span_1);
+                                total_perguntas_erradas.appendChild(total_perguntas_erradas_span_2);
+
+                                const lista_de_perguntas_erradas = document.createElement('h1');
+                                const lista_de_perguntas_erradas_span_1 = document.createElement('span');
+                                const lista_de_perguntas_erradas_span_2 = document.createElement('span');
+                                lista_de_perguntas_erradas_span_1.className = ('resultado_2');
+                                lista_de_perguntas_erradas_span_2.className = ('valor');
+                                lista_de_perguntas_erradas_span_1.textContent = ('Questões erradas: ');
+                                lista_de_perguntas_erradas_span_2.textContent = (`${perguntas_erradas}`);
+                                lista_de_perguntas_erradas.appendChild(lista_de_perguntas_erradas_span_1);
+                                lista_de_perguntas_erradas.appendChild(lista_de_perguntas_erradas_span_2);
+                                const final = document.createElement('h1');
+                                const hr_1 = document.createElement('hr');
+                                const hr_2 = document.createElement('hr');
+                                
+
+
+                                final.textContent = ('Quiz Finalizado')
+                                final.className = ('resultado_1')
+                                resultadoFinal.className = ('resultado_final');
+
+                                resultadoFinal.appendChild(final)
+                                resultadoFinal.appendChild(Pontuação_final);
+                                resultadoFinal.appendChild(hr_1)
+                                resultadoFinal.appendChild(total_perguntas_acertadas);
+                                resultadoFinal.appendChild(hr_2)
+                                resultadoFinal.appendChild(total_perguntas_erradas);
+                                resultadoFinal.appendChild(hr)
+                                resultadoFinal.appendChild(lista_de_perguntas_erradas);
+
+                                tela.appendChild(resultadoFinal);
+
+                                // Você pode adicionar lógica para mostrar o resultado final aqui.
+                            }
+                        }
+
+
+                        // Adicionando eventos de clique para verificar a resposta
+                        opcao_1.addEventListener('click', function() {
+                            verificarResposta(0);
+                        });
+                        opcao_2.addEventListener('click', function() {
+                            verificarResposta(1);
+                        });
+                        opcao_3.addEventListener('click', function() {
+                            verificarResposta(2);
+                        });
+                        opcao_4.addEventListener('click', function() {
+                            verificarResposta(3);
+                        });
+                    }
+
+                    mostrarPergunta(perguntaAtual); // Mostra a primeira pergunta
+                });
+                })
+                })
+                prova_3.addEventListener("click",function(){
+                    tela.innerHTML = '';
+                    const titulo = document.createElement('h1');
+                const listra = document.createElement('hr');
+                const arquivos  = document.createElement('button');
+                const videoaulas =  document.createElement('button');
+                const desafios = document.createElement('button');
+                const Quiz = document.createElement('button');
+
+                desafios.textContent = 'Desafios';
+                desafios.className = 'Quiz';
+                arquivos.textContent = 'Matérias em PDF';
+                arquivos.className = 'Quiz';
+                videoaulas.textContent = 'Video-Aulas';
+                videoaulas.classList = 'Quiz';
+                titulo.textContent = 'Introdução a Programação';
+                titulo.className = 'Titulo';
+                Quiz.textContent = 'Quiz';
+                Quiz.getElementsByClassName = 'Quiz';
+
+                tela.appendChild(titulo);
+                tela.appendChild(listra);
+                tela.appendChild(arquivos);
+                tela.appendChild(desafios);
+                tela.appendChild(videoaulas);
+                tela.appendChild(Quiz);
+                })
+            })
+    </script>
+            <a href="{% url 'home' %}"><button class="rotas">Inicio</button></a>
+            <div class="escolhas" >
+                <div class="tela">
+                    <h1>Introdução a Programação</h1>
+                    <hr>
+                    <button id="prova_1">Prova 1</button>
+                    <button id="prova_2">Prova 2</button>
+                    <button id="prova_3">Prova 3</button>
+                </div>
+            </div>
+</body>
+</html>
