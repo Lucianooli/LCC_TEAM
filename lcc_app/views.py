@@ -58,9 +58,14 @@ def Introducao_Pc(request):
     pdf_4 = Pdf.objects.get(id=5)
     pdf_5 = Pdf.objects.get(id=6)
     pdf_6 = Pdf.objects.get(id=7)
-    desafio_0 = Desafio.objects.get(id=1)
+    pdf_7 = Pdf.objects.get(id=26)
+    pdf_8 = Pdf.objects.get(id=27)
 
-    return render(request,'lcc_app/introducao_pc.html',{'pdf_0':pdf_0,'pdf_1':pdf_1,'pdf_2':pdf_2,'pdf_3':pdf_3,'pdf_4':pdf_4,'pdf_5':pdf_5,'pdf_6':pdf_6,'desafio_0':desafio_0})
+    desafio_0 = Desafio.objects.get(id=1)
+    desafio_2 = Desafio.objects.get(id=12)
+    desafio_3 = Desafio.objects.get(id=13)
+
+    return render(request,'lcc_app/introducao_pc.html',{'pdf_0':pdf_0,'pdf_1':pdf_1,'pdf_2':pdf_2,'pdf_3':pdf_3,'pdf_4':pdf_4,'pdf_5':pdf_5,'pdf_6':pdf_6,'desafio_0':desafio_0,'pdf_7':pdf_7,'desafio_2':desafio_2,'pdf_8':pdf_8,'desafio_3':desafio_3})
 
 def Fundamentos_antrofilosoficos_da_educacao(request):
     pdf_0 = Pdf.objects.get(id=8)
