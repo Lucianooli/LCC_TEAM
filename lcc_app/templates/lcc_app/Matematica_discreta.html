@@ -406,6 +406,361 @@
             tela.appendChild(desafios);
             tela.appendChild(videoaulas);
             tela.appendChild(Quiz);
+
+
+            arquivos.addEventListener('click',function(){
+                tela.innerHTML = '';
+                const arquivos = document.getElementById('arquivos');
+                const pdf_2 = document.createElement('button');
+                const donwload_2 = document.createElement('a');
+                donwload_2.href = '{{ pdf_2.arquivo.url }}';  
+                donwload_2.download = '{{ pdf_2.nome  }}';
+                pdf_2.textContent = ('{{ pdf_2.nome  }}');
+                pdf_2.className = ('Quiz');
+                pdf_2.onclick = function(){
+                        donwload_2.click();
+                }
+                tela.appendChild(pdf_2);
+            })
+            desafios.addEventListener('click',function(){
+                tela.innerHTML = '';
+                const arquivos = document.getElementById('arquivos');
+                const desafio_2 = document.createElement('button');
+                const donwload_2 = document.createElement('a');
+                donwload_2.href = '{{ desafio_2.arquivo.url }}';  
+                donwload_2.download = '{{ desafio_2.nome  }}';
+                desafio_2.textContent = ('{{ desafio_2.nome  }}');
+                desafio_2.className = ('Quiz');
+                desafio_2.onclick = function(){
+                    donwload_2.click();
+                }
+                tela.appendChild(desafio_2);
+            })
+            videoaulas.addEventListener('click',function(){
+                tela.innerHTML = '';
+                const videoaulas_1 = document.createElement('iframe');
+                    const videoaulas_2 = document.createElement('iframe');
+                    const videoaulas_3 = document.createElement('iframe');
+                    const videoaulas_4 = document.createElement('iframe');
+                    const videoaulas_5 = document.createElement('iframe');
+                    const videoaulas_6 = document.createElement('iframe');
+                    const videoaulas_7 = document.createElement('iframe');
+
+                    videoaulas_1.src = ('https://www.youtube.com/embed/nq0UHzXBe5w?si=EhqUQRfyrxgmflvF');
+                    videoaulas_1.controls = true;
+                    videoaulas_1.width = 640;
+                    videoaulas_1.height = 360;
+                    videoaulas_1.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'; // Permissões
+                    videoaulas_1.allowFullscreen = true; // Permite que o vídeo seja exibido em tela cheia
+
+                    videoaulas_2.src = ('https://www.youtube.com/embed/tKHpu7-4K-o?si=s4K4m5d2r9E3hKMs');
+                    videoaulas_2.controls = true;
+                    videoaulas_2.width = 640;
+                    videoaulas_2.height = 360;
+                    videoaulas_2.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'; // Permissões
+                    videoaulas_2.allowFullscreen = true; // Permite que o vídeo seja exibido em tela cheia
+
+                    videoaulas_3.src = ('https://www.youtube.com/embed/wvOr_gVa6GA?si=C1aM2nKrK_npvn89');
+                    videoaulas_3.controls = true;
+                    videoaulas_3.width = 640;
+                    videoaulas_3.height = 360;
+                    videoaulas_3.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'; // Permissões
+                    videoaulas_3.allowFullscreen = true; // Permite que o vídeo seja exibido em tela cheia
+                    
+                    videoaulas_4.src = ('https://www.youtube.com/embed/k5N9E5HNUk0?si=k7S9UWLL-BvgtTVt');
+                    videoaulas_4.controls = true;
+                    videoaulas_4.width = 640;
+                    videoaulas_4.height = 360;
+                    videoaulas_4.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'; // Permissões
+                    videoaulas_4.allowFullscreen = true; // Permite que o vídeo seja exibido em tela cheia
+
+                    videoaulas_5.src = ('https://www.youtube.com/embed/jTEarS1mHd4?si=LXOOKU3OXnCuki-q');
+                    videoaulas_5.controls = true;
+                    videoaulas_5.width = 640;
+                    videoaulas_5.height = 360;
+                    videoaulas_5.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'; // Permissões
+                    videoaulas_5.allowFullscreen = true; // Permite que o vídeo seja exibido em tela cheia
+
+                    videoaulas_6.src = ('https://www.youtube.com/embed/gYdOA4chMPA?si=8F72FH2yQEEUevLO');
+                    videoaulas_6.controls = true;
+                    videoaulas_6.width = 640;
+                    videoaulas_6.height = 360;
+                    videoaulas_6.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'; // Permissões
+                    videoaulas_6.allowFullscreen = true; // Permite que o vídeo seja exibido em tela cheia
+
+                    videoaulas_7.src = ('https://www.youtube.com/embed/k8_dpEj8uBs?si=iF7zPj9NeVtG6TIX');
+                    videoaulas_7.controls = true;
+                    videoaulas_7.width = 640;
+                    videoaulas_7.height = 360;
+                    videoaulas_7.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'; // Permissões
+                    videoaulas_7.allowFullscreen = true; // Permite que o vídeo seja exibido em tela cheia
+
+                    tela.appendChild(videoaulas_1);
+                    tela.appendChild(videoaulas_2);
+                    tela.appendChild(videoaulas_3);
+                    tela.appendChild(videoaulas_4);
+                    tela.appendChild(videoaulas_5);
+                    tela.appendChild(videoaulas_6);
+                    tela.appendChild(videoaulas_7);
+
+            })
+            Quiz.addEventListener('click',function(){
+                tela.innerHTML = '';
+                const iniciar = document.createElement('button');
+                const Jogo = document.createElement('h1');
+                const hr = document.createElement('hr');
+
+                Jogo.textContent = 'Perguntas e Respostas';
+                Jogo.className = 'Titulo';
+                iniciar.textContent = 'Iniciar';
+                iniciar.classList = 'Quiz';
+                tela.appendChild(Jogo);
+                tela.appendChild(hr);
+                tela.appendChild(iniciar);
+
+                iniciar.addEventListener('click', function() {
+
+                    let perguntaAtual = 0;
+                    const perguntas = [
+                        {
+                            pergunta: '1 – Sobre relações de equivalência, qual das seguintes opções descreve corretamente uma relação de equivalência?',
+                            opcoes: [
+                                'É uma relação reflexiva e transitiva',
+                                'É uma relação que é reflexiva, simétrica e transitiva',
+                                'É uma relação simétrica e assimétrica',
+                                'É uma relação que é apenas reflexiva'
+                            ],
+                            resposta_correta: 1 // A primeira opção é a correta
+                        },
+                        {
+                            pergunta: '2 – Uma função é bijetora quando:',
+                            opcoes: [
+                                'Ela é apenas injetora',
+                                'Ela é apenas sobrejetora',
+                                'Ela é injetora e sobrejetora.',
+                                'Ela é transitiva e reflexiva.'
+                            ],
+                            resposta_correta: 2 // A terceira opção é a correta
+                        },
+                        {
+                            pergunta: '3 - Qual das afirmações abaixo é verdadeira sobre a composição de funções?',
+                            opcoes: [
+                                'A composição de funções é sempre comutativa',
+                                'A ordem das funções na composição não altera o resultado',
+                                'A composição é associativa, mas não necessariamente comutativa',
+                                'A composição só é válida para funções inversas.'
+                            ],
+                            resposta_correta: 2
+
+                        },
+                        {
+                            pergunta: '4 – Uma função inversa f⁻¹(x) existe somente se a função f(x) for:',
+                            opcoes:[
+                                'Apenas injetora',
+                                'Apenas sobrejetora.',
+                                'Bijetora',
+                                'Apenas reflexiva',
+                            ],
+                            resposta_correta: 2
+
+                        },
+                        {
+                            pergunta: '5 – Qual é a definição correta de ordem de grandeza em matemática discreta?',
+                            opcoes:[
+                                'A ordem de grandeza mede a precisão dos cálculos em números grandes',
+                                'A ordem de grandeza é usada para comparar a magnitude de diferentes quantidades, desconsiderando constantes multiplicativas',
+                                'A ordem de grandeza se refere à quantidade exata de números inteiros',
+                                'A ordem de grandeza descreve a relação de equivalência entre conjuntos finitos'
+                            ],
+                            resposta_correta: 1
+                        },
+                        {
+                            pergunta: '6 – Uma matriz é considerada inversível se:',
+                            opcoes:[
+                                'Ela é simétrica',
+                                'Seu determinante é igual a zero.',
+                                'Ela é diagonal',
+                                'Seu determinante é diferente de zero'
+                            ],
+                            resposta_correta: 3
+                        },
+                        {
+                            pergunta: '7 – Para que uma relação seja considerada uma relação de equivalência, ela precisa ser:',
+                            opcoes:[
+                                'Simétrica, reflexiva e transitiva.',
+                                'Simétrica, anti-simétrica e transitiva.',
+                                'Apenas reflexiva e transitiva.',
+                                'Apenas simétrica e anti-simétrica'
+                            ],
+                            resposta_correta:0
+                        },
+                        {
+                            pergunta:'8 – Em um conjunto de funções, qual é a propriedade fundamental da composição de funções?',
+                            opcoes: [
+                                'A composição é anti-simétrica.',
+                                'A composição é associativa',
+                                'A composição é transitiva',
+                                'A composição é reflexiva'
+                            ],
+                            resposta_correta:1
+                        },
+                        {
+                            pergunta: '9 – Quando uma função é considerada injetora?',
+                            opcoes: [
+                                'Quando diferentes elementos do domínio têm diferentes imagens',
+                                'Quando todos os elementos do contradomínio têm pelo menos uma imagem no domínio',
+                                'Quando a função não tem valores repetidos no contradomínio',
+                                'Quando a função é simétrica'
+                            ],
+                            resposta_correta:0
+                        },
+                        {
+                            pergunta:'10 – Seja A uma matriz quadrada. Qual das seguintes afirmativas é verdadeira se A é inversível?',
+                            opcoes:[
+                                'A tem um determinante igual a zero',
+                                'A é simétrica',
+                                'A tem um determinante diferente de zero',
+                                'A é uma matriz identidade'
+                            ],
+                            resposta_correta:2
+                        },
+                      
+                        // Adicione mais perguntas aqui
+                    ];
+                    function mostrarPergunta(index) {
+                        tela.innerHTML = '';
+
+                        const Pergunta = document.createElement('h1');
+                        const hr = document.createElement('hr');
+                        Pergunta.className = 'Titulo2';
+                        Pergunta.textContent = perguntas[index].pergunta;
+
+                        const opcao_1 = document.createElement('button');
+                        const opcao_2 = document.createElement('button');
+                        const opcao_3 = document.createElement('button');
+                        const opcao_4 = document.createElement('button');
+
+                        opcao_1.textContent = perguntas[index].opcoes[0];
+                        opcao_2.textContent = perguntas[index].opcoes[1];
+                        opcao_3.textContent = perguntas[index].opcoes[2];
+                        opcao_4.textContent = perguntas[index].opcoes[3];
+
+                        opcao_1.className = 'Quiz';
+                        opcao_2.className = 'Quiz';
+                        opcao_3.className = 'Quiz';
+                        opcao_4.className = 'Quiz';
+
+
+
+                        tela.appendChild(Pergunta);
+                        tela.appendChild(hr);
+                        tela.appendChild(opcao_1);
+                        tela.appendChild(opcao_2);
+                        tela.appendChild(opcao_3);
+                        tela.appendChild(opcao_4);
+
+                        function verificarResposta(opcao) {
+                            if (opcao === perguntas[index].resposta_correta) {
+                                alert('Resposta correta!');
+                                acertos += 1; // Adiciona 1 ponto por resposta correta
+
+                            } else {
+                                alert('Resposta incorreta!');
+                                perguntas_erradas.push(perguntaAtual)
+                            }
+                            perguntaAtual++;
+                            if (perguntaAtual < perguntas.length) {
+                                mostrarPergunta(perguntaAtual); // Mostra a próxima pergunta
+                            } else {
+                                alert('Quiz finalizado!');
+                                tela.innerHTML='';
+                                let erros = (total_perguntas - acertos);
+                                let media = (acertos / total_perguntas) * 100;
+                                const resultadoFinal = document.createElement('div');
+                                const Pontuação_final = document.createElement('h1');
+                                const Pontuação_final_span_1 = document.createElement('span');
+                                const Pontuação_final_span_2 = document.createElement('span');
+                                Pontuação_final_span_1.className = ('resultado_2');
+                                Pontuação_final_span_2.className = ('valor');
+                                Pontuação_final_span_1.textContent = ('Pontuação final: ')
+                                Pontuação_final_span_2.textContent = (`${Math.round(media)}%`)
+                                Pontuação_final.appendChild(Pontuação_final_span_1);
+                                Pontuação_final.appendChild(Pontuação_final_span_2);
+
+                                const total_perguntas_acertadas = document.createElement('h1');
+                                const total_perguntas_acertadas_span_1 = document.createElement('span');
+                                const total_perguntas_acertadas_span_2 = document.createElement('span');
+                                total_perguntas_acertadas_span_1.className = ('resultado_2');
+                                total_perguntas_acertadas_span_2.className = ('valor');
+                                total_perguntas_acertadas_span_1.textContent = ('Total de perguntas acertadas: ')
+                                total_perguntas_acertadas_span_2.textContent = (`${acertos}`);
+                                total_perguntas_acertadas.appendChild(total_perguntas_acertadas_span_1);
+                                total_perguntas_acertadas.appendChild(total_perguntas_acertadas_span_2);
+
+                                const total_perguntas_erradas = document.createElement('h1');
+                                const total_perguntas_erradas_span_1 = document.createElement('span');
+                                const total_perguntas_erradas_span_2 = document.createElement('span');
+                                total_perguntas_erradas_span_1.className = ('resultado_2');
+                                total_perguntas_erradas_span_2.className = ('valor');
+                                total_perguntas_erradas_span_1.textContent = ('total de perguntas erradas: ')
+                                total_perguntas_erradas_span_2.textContent = (` ${erros} `)
+                                total_perguntas_erradas.appendChild(total_perguntas_erradas_span_1);
+                                total_perguntas_erradas.appendChild(total_perguntas_erradas_span_2);
+
+                                const lista_de_perguntas_erradas = document.createElement('h1');
+                                const lista_de_perguntas_erradas_span_1 = document.createElement('span');
+                                const lista_de_perguntas_erradas_span_2 = document.createElement('span');
+                                lista_de_perguntas_erradas_span_1.className = ('resultado_2');
+                                lista_de_perguntas_erradas_span_2.className = ('valor');
+                                lista_de_perguntas_erradas_span_1.textContent = ('Questões erradas: ');
+                                lista_de_perguntas_erradas_span_2.textContent = (`${perguntas_erradas}`);
+                                lista_de_perguntas_erradas.appendChild(lista_de_perguntas_erradas_span_1);
+                                lista_de_perguntas_erradas.appendChild(lista_de_perguntas_erradas_span_2);
+                                const final = document.createElement('h1');
+                                const hr_1 = document.createElement('hr');
+                                const hr_2 = document.createElement('hr');
+                                
+
+
+                                final.textContent = ('Quiz Finalizado')
+                                final.className = ('resultado_1')
+                                resultadoFinal.className = ('resultado_final');
+
+                                resultadoFinal.appendChild(final)
+                                resultadoFinal.appendChild(Pontuação_final);
+                                resultadoFinal.appendChild(hr_1)
+                                resultadoFinal.appendChild(total_perguntas_acertadas);
+                                resultadoFinal.appendChild(hr_2)
+                                resultadoFinal.appendChild(total_perguntas_erradas);
+                                resultadoFinal.appendChild(hr)
+                                resultadoFinal.appendChild(lista_de_perguntas_erradas);
+
+                                tela.appendChild(resultadoFinal);
+
+                                // Você pode adicionar lógica para mostrar o resultado final aqui.
+                            }
+                        }
+
+
+                        // Adicionando eventos de clique para verificar a resposta
+                        opcao_1.addEventListener('click', function() {
+                            verificarResposta(0);
+                        });
+                        opcao_2.addEventListener('click', function() {
+                            verificarResposta(1);
+                        });
+                        opcao_3.addEventListener('click', function() {
+                            verificarResposta(2);
+                        });
+                        opcao_4.addEventListener('click', function() {
+                            verificarResposta(3);
+                        });
+                    }
+
+                    mostrarPergunta(perguntaAtual); // Mostra a primeira pergunta
+                });
+            
+            })
             })
 
         prova_3.addEventListener("click",function(){
@@ -434,6 +789,344 @@
             tela.appendChild(desafios);
             tela.appendChild(videoaulas);
             tela.appendChild(Quiz);
+
+            arquivos.addEventListener('click',function(){
+                tela.innerHTML = '';
+                const arquivos = document.getElementById('arquivos');
+                const pdf_3 = document.createElement('button');
+                const donwload_3 = document.createElement('a');
+                donwload_3.href = '{{ pdf_3.arquivo.url }}';  
+                donwload_3.download = '{{ pdf_3.nome  }}';
+                pdf_3.textContent = ('{{ pdf_3.nome  }}');
+                pdf_3.className = ('Quiz');
+                pdf_3.onclick = function(){
+                        donwload_3.click();
+                }
+                tela.appendChild(pdf_3);
+            })
+            desafios.addEventListener('click',function(){
+                tela.innerHTML = '';
+                const arquivos = document.getElementById('arquivos');
+                const desafio_3 = document.createElement('button');
+                const donwload_3 = document.createElement('a');
+                donwload_3.href = '{{ desafio_3.arquivo.url }}';  
+                donwload_3.download = '{{ desafio_3.nome  }}';
+                desafio_3.textContent = ('{{ desafio_3.nome  }}');
+                desafio_3.className = ('Quiz');
+                desafio_3.onclick = function(){
+                    donwload_3.click();
+                }
+                tela.appendChild(desafio_3);
+            })
+            videoaulas.addEventListener('click',function(){
+                    tela.innerHTML = '';
+                    const videoaulas_1 = document.createElement('iframe');
+                    const videoaulas_2 = document.createElement('iframe');
+                    const videoaulas_3 = document.createElement('iframe');
+                    const videoaulas_4 = document.createElement('iframe');
+                    const videoaulas_5 = document.createElement('iframe');
+
+                    videoaulas_1.src = ('https://www.youtube.com/embed/T6yKp82k9vM?si=irnl4PUQxNgGEjUL');
+                    videoaulas_1.controls = true;
+                    videoaulas_1.width = 640;
+                    videoaulas_1.height = 360;
+                    videoaulas_1.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'; // Permissões
+                    videoaulas_1.allowFullscreen = true; // Permite que o vídeo seja exibido em tela cheia
+
+                    videoaulas_2.src = ('https://www.youtube.com/embed/yONrzDAntSw?si=YIKnPH-OFwb8Wa4K');
+                    videoaulas_2.controls = true;
+                    videoaulas_2.width = 640;
+                    videoaulas_2.height = 360;
+                    videoaulas_2.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'; // Permissões
+                    videoaulas_2.allowFullscreen = true; // Permite que o vídeo seja exibido em tela cheia
+
+                    videoaulas_3.src = ('https://www.youtube.com/embed/GemwOyQohw4?si=C7L8PfuSkGcLnwGW');
+                    videoaulas_3.controls = true;
+                    videoaulas_3.width = 640;
+                    videoaulas_3.height = 360;
+                    videoaulas_3.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'; // Permissões
+                    videoaulas_3.allowFullscreen = true; // Permite que o vídeo seja exibido em tela cheia
+                    
+                    videoaulas_4.src = ('https://www.youtube.com/embed/FYuYZIRauz8?si=hNRmHR0fehlwSdyL');
+                    videoaulas_4.controls = true;
+                    videoaulas_4.width = 640;
+                    videoaulas_4.height = 360;
+                    videoaulas_4.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'; // Permissões
+                    videoaulas_4.allowFullscreen = true; // Permite que o vídeo seja exibido em tela cheia
+
+                    videoaulas_5.src = ('https://www.youtube.com/embed/3vBx8GqlVT4?si=PoznvHxKaoDRvcNP');
+                    videoaulas_5.controls = true;
+                    videoaulas_5.width = 640;
+                    videoaulas_5.height = 360;
+                    videoaulas_5.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'; // Permissões
+                    videoaulas_5.allowFullscreen = true; // Permite que o vídeo seja exibido em tela cheia
+
+
+
+                    tela.appendChild(videoaulas_1);
+                    tela.appendChild(videoaulas_2);
+                    tela.appendChild(videoaulas_3);
+                    tela.appendChild(videoaulas_4);
+                    tela.appendChild(videoaulas_5);
+
+            })
+            Quiz.addEventListener('click',function(){
+                tela.innerHTML = '';
+                const iniciar = document.createElement('button');
+                const Jogo = document.createElement('h1');
+                const hr = document.createElement('hr');
+
+                Jogo.textContent = 'Perguntas e Respostas';
+                Jogo.className = 'Titulo';
+                iniciar.textContent = 'Iniciar';
+                iniciar.classList = 'Quiz';
+                tela.appendChild(Jogo);
+                tela.appendChild(hr);
+                tela.appendChild(iniciar);
+
+                iniciar.addEventListener('click', function() {
+
+                    let perguntaAtual = 0;
+                    const perguntas = [
+                        {
+                            pergunta: '1 – Qual é a definição de um grafo completo?',
+                            opcoes: [
+                                'Um grafo que possui pelo menos um ciclo',
+                                'Um grafo em que todos os vértices são conectados por arestas não direcionadas',
+                                'Um grafo que não possui ciclos',
+                                'Um grafo onde cada vértice está conectado apenas a um único outro vértice'
+                            ],
+                            resposta_correta: 1 // A primeira opção é a correta
+                        },
+                        {
+                            pergunta: '2 – O que é um caminho euleriano em um grafo?',
+                            opcoes: [
+                                'Um caminho que passa por cada aresta exatamente uma vez',
+                                'Um caminho que passa por cada vértice exatamente uma vez',
+                                'Um caminho que visita todos os vértices de forma cíclica',
+                                'Um caminho que passa pelo maior número possível de arestas'
+                            ],
+                            resposta_correta: 0 // A terceira opção é a correta
+                        },
+                        {
+                            pergunta: '3 - Qual é a característica de um grafo bipartido?',
+                            opcoes: [
+                                'Possui dois ciclos de comprimentos iguais',
+                                'Seus vértices podem ser divididos em dois conjuntos, onde não há arestas conectando vértices do mesmo conjunto',
+                                'Tem exatamente dois vértices de grau ímpar',
+                                'É composto por dois grafos completos'
+                            ],
+                            resposta_correta: 1
+
+                        },
+                        {
+                            pergunta: '4 – Qual é a definição correta de um grafo planar?',
+                            opcoes:[
+                                'Um grafo que possui ciclos de diferentes comprimentos',
+                                'Um grafo que possui apenas um ciclo',
+                                'Um grafo que pode ser desenhado no plano sem que suas arestas se cruzem',
+                                'Um grafo com vértices de graus iguais',
+                            ],
+                            resposta_correta: 2
+
+                        },
+                        {
+                            pergunta: '5 – Qual das seguintes condições é verdadeira para que um grafo tenha um ciclo Hamiltoniano?',
+                            opcoes:[
+                                'Ele precisa ter exatamente um ciclo',
+                                'Cada vértice deve ser visitado exatamente duas vezes',
+                                'Deve existir um ciclo que passe por cada vértice exatamente uma vez',
+                                'Todas as arestas devem ser direcionadas'
+                            ],
+                            resposta_correta: 2
+                        },
+                        {
+                            pergunta: '6 – O que é o grau de um vértice em um grafo?',
+                            opcoes:[
+                                'O número de ciclos a que o vértice pertence',
+                                'O número de arestas que incidem sobre ele',
+                                'A distância mínima do vértice até o vértice inicial',
+                                'O número de vértices que ele conecta diretamente'
+                            ],
+                            resposta_correta: 1
+                        },
+                        {
+                            pergunta: '7 – Um grafo é considerado conexo quando:',
+                            opcoes:[
+                                'Ele possui um ciclo.',
+                                'Ele não tem vértices isolados',
+                                ' Ele possui um vértice de grau zero',
+                                'Existe um caminho entre cada par de vértices'
+                            ],
+                            resposta_correta:3
+                        },
+                        {
+                            pergunta:'8 – O que é um grafo direcionado (ou digrafo)?',
+                            opcoes: [
+                                'Um grafo onde todas as arestas têm o mesmo peso',
+                                'Um grafo que não possui ciclos',
+                                'Um grafo em que as arestas têm uma direção associada',
+                                'Um grafo com arestas que conectam apenas vértices adjacentes'
+                            ],
+                            resposta_correta:2
+                        },
+                        {
+                            pergunta: '9 – Qual é a definição de um ciclo em um grafo?',
+                            opcoes: [
+                                'Um caminho fechado onde o vértice inicial é igual ao vértice final',
+                                'Um caminho que visita todos os vértices pelo menos uma vez',
+                                'Um caminho que não repete vértices',
+                                'Um caminho que possui apenas arestas de mesmo peso'
+                            ],
+                            resposta_correta:0
+                        },
+                        {
+                            pergunta:'10 – Em um grafo ponderado, o que é o peso de uma aresta?',
+                            opcoes:[
+                                'A quantidade de ciclos que passam por essa aresta',
+                                'O número de vértices adjacentes à aresta',
+                                'O valor numérico associado à aresta, que representa um custo ou distância',
+                                'O grau do vértice final da aresta'
+                            ],
+                            resposta_correta:2
+                        },
+                      
+                        // Adicione mais perguntas aqui
+                    ];
+                    function mostrarPergunta(index) {
+                        tela.innerHTML = '';
+
+                        const Pergunta = document.createElement('h1');
+                        const hr = document.createElement('hr');
+                        Pergunta.className = 'Titulo2';
+                        Pergunta.textContent = perguntas[index].pergunta;
+
+                        const opcao_1 = document.createElement('button');
+                        const opcao_2 = document.createElement('button');
+                        const opcao_3 = document.createElement('button');
+                        const opcao_4 = document.createElement('button');
+
+                        opcao_1.textContent = perguntas[index].opcoes[0];
+                        opcao_2.textContent = perguntas[index].opcoes[1];
+                        opcao_3.textContent = perguntas[index].opcoes[2];
+                        opcao_4.textContent = perguntas[index].opcoes[3];
+
+                        opcao_1.className = 'Quiz';
+                        opcao_2.className = 'Quiz';
+                        opcao_3.className = 'Quiz';
+                        opcao_4.className = 'Quiz';
+
+
+
+                        tela.appendChild(Pergunta);
+                        tela.appendChild(hr);
+                        tela.appendChild(opcao_1);
+                        tela.appendChild(opcao_2);
+                        tela.appendChild(opcao_3);
+                        tela.appendChild(opcao_4);
+
+                        function verificarResposta(opcao) {
+                            if (opcao === perguntas[index].resposta_correta) {
+                                alert('Resposta correta!');
+                                acertos += 1; // Adiciona 1 ponto por resposta correta
+
+                            } else {
+                                alert('Resposta incorreta!');
+                                perguntas_erradas.push(perguntaAtual)
+                            }
+                            perguntaAtual++;
+                            if (perguntaAtual < perguntas.length) {
+                                mostrarPergunta(perguntaAtual); // Mostra a próxima pergunta
+                            } else {
+                                alert('Quiz finalizado!');
+                                tela.innerHTML='';
+                                let erros = (total_perguntas - acertos);
+                                let media = (acertos / total_perguntas) * 100;
+                                const resultadoFinal = document.createElement('div');
+                                const Pontuação_final = document.createElement('h1');
+                                const Pontuação_final_span_1 = document.createElement('span');
+                                const Pontuação_final_span_2 = document.createElement('span');
+                                Pontuação_final_span_1.className = ('resultado_2');
+                                Pontuação_final_span_2.className = ('valor');
+                                Pontuação_final_span_1.textContent = ('Pontuação final: ')
+                                Pontuação_final_span_2.textContent = (`${Math.round(media)}%`)
+                                Pontuação_final.appendChild(Pontuação_final_span_1);
+                                Pontuação_final.appendChild(Pontuação_final_span_2);
+
+                                const total_perguntas_acertadas = document.createElement('h1');
+                                const total_perguntas_acertadas_span_1 = document.createElement('span');
+                                const total_perguntas_acertadas_span_2 = document.createElement('span');
+                                total_perguntas_acertadas_span_1.className = ('resultado_2');
+                                total_perguntas_acertadas_span_2.className = ('valor');
+                                total_perguntas_acertadas_span_1.textContent = ('Total de perguntas acertadas: ')
+                                total_perguntas_acertadas_span_2.textContent = (`${acertos}`);
+                                total_perguntas_acertadas.appendChild(total_perguntas_acertadas_span_1);
+                                total_perguntas_acertadas.appendChild(total_perguntas_acertadas_span_2);
+
+                                const total_perguntas_erradas = document.createElement('h1');
+                                const total_perguntas_erradas_span_1 = document.createElement('span');
+                                const total_perguntas_erradas_span_2 = document.createElement('span');
+                                total_perguntas_erradas_span_1.className = ('resultado_2');
+                                total_perguntas_erradas_span_2.className = ('valor');
+                                total_perguntas_erradas_span_1.textContent = ('total de perguntas erradas: ')
+                                total_perguntas_erradas_span_2.textContent = (` ${erros} `)
+                                total_perguntas_erradas.appendChild(total_perguntas_erradas_span_1);
+                                total_perguntas_erradas.appendChild(total_perguntas_erradas_span_2);
+
+                                const lista_de_perguntas_erradas = document.createElement('h1');
+                                const lista_de_perguntas_erradas_span_1 = document.createElement('span');
+                                const lista_de_perguntas_erradas_span_2 = document.createElement('span');
+                                lista_de_perguntas_erradas_span_1.className = ('resultado_2');
+                                lista_de_perguntas_erradas_span_2.className = ('valor');
+                                lista_de_perguntas_erradas_span_1.textContent = ('Questões erradas: ');
+                                lista_de_perguntas_erradas_span_2.textContent = (`${perguntas_erradas}`);
+                                lista_de_perguntas_erradas.appendChild(lista_de_perguntas_erradas_span_1);
+                                lista_de_perguntas_erradas.appendChild(lista_de_perguntas_erradas_span_2);
+                                const final = document.createElement('h1');
+                                const hr_1 = document.createElement('hr');
+                                const hr_2 = document.createElement('hr');
+                                
+
+
+                                final.textContent = ('Quiz Finalizado')
+                                final.className = ('resultado_1')
+                                resultadoFinal.className = ('resultado_final');
+
+                                resultadoFinal.appendChild(final)
+                                resultadoFinal.appendChild(Pontuação_final);
+                                resultadoFinal.appendChild(hr_1)
+                                resultadoFinal.appendChild(total_perguntas_acertadas);
+                                resultadoFinal.appendChild(hr_2)
+                                resultadoFinal.appendChild(total_perguntas_erradas);
+                                resultadoFinal.appendChild(hr)
+                                resultadoFinal.appendChild(lista_de_perguntas_erradas);
+
+                                tela.appendChild(resultadoFinal);
+
+                                // Você pode adicionar lógica para mostrar o resultado final aqui.
+                            }
+                        }
+
+
+                        // Adicionando eventos de clique para verificar a resposta
+                        opcao_1.addEventListener('click', function() {
+                            verificarResposta(0);
+                        });
+                        opcao_2.addEventListener('click', function() {
+                            verificarResposta(1);
+                        });
+                        opcao_3.addEventListener('click', function() {
+                            verificarResposta(2);
+                        });
+                        opcao_4.addEventListener('click', function() {
+                            verificarResposta(3);
+                        });
+                    }
+
+                    mostrarPergunta(perguntaAtual); // Mostra a primeira pergunta
+                });
+            
+            })
             })
         })
         //Fazer parte dois

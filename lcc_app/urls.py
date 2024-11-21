@@ -15,7 +15,7 @@ urlpatterns = [
     path('Metologia_cientifica/',views.Metodologia_cientifica, name='Metologia_cientifica'),
     path('calculo_1/', views.Calculo_1, name='calculo_1'),
     path('Matematica_Discreta', views.Matematica_Discreta, name='Matematica_discreta'),
-path("Introducao_programacao/", views.Introducao_programacao, name="intro_programa")
+    path("Introducao_programacao/", views.Introducao_programacao, name="intro_programa")
 
 ]
 
