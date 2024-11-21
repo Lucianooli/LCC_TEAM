@@ -49,7 +49,7 @@ def register(request):
         form = UserRegisterForm()
     return render(request, 'lcc_app/register.html', {'form': form})
 
-#@login_required
+@login_required
 def Introducao_Pc(request):
     pdf_0 = Pdf.objects.get(id=1)
     pdf_1 = Pdf.objects.get(id=2)
@@ -67,14 +67,20 @@ def Introducao_Pc(request):
 
     return render(request,'lcc_app/introducao_pc.html',{'pdf_0':pdf_0,'pdf_1':pdf_1,'pdf_2':pdf_2,'pdf_3':pdf_3,'pdf_4':pdf_4,'pdf_5':pdf_5,'pdf_6':pdf_6,'desafio_0':desafio_0,'pdf_7':pdf_7,'desafio_2':desafio_2,'pdf_8':pdf_8,'desafio_3':desafio_3})
 
+@login_required
 def Fundamentos_antrofilosoficos_da_educacao(request):
     pdf_0 = Pdf.objects.get(id=8)
     pdf_1 = Pdf.objects.get(id=9)
 
     return render(request,'lcc_app/Fundamentos_antrofilosoficos_da_educacao.html',{'pdf_0':pdf_0,'pdf_1':pdf_1})
+
+
+@login_required
 def Metodologia_cientifica(request):
     pdf_0 = Pdf.objects.get(id=10)
     return render(request,'lcc_app/Metologia_cientifica.html',{'pdf_0':pdf_0})
+
+@login_required
 def Calculo_1(request):
     pdf_1 = Pdf.objects.get(id=11)
     pdf_2 = Pdf.objects.get(id=12)
@@ -102,6 +108,8 @@ def Calculo_1(request):
     return render(request,'lcc_app/calculo_1.html',{'pdf_1':pdf_1,'pdf_2':pdf_2,'pdf_3':pdf_3,'pdf_4':pdf_4,'desafio_1':desafio_1,'desafio_2':desafio_2,'desafio_3':desafio_3,
     'pdf_5':pdf_5,'pdf_6':pdf_6,'pdf_7':pdf_7,'pdf_8':pdf_8,'pdf_9':pdf_9,'pdf_10':pdf_10,'desafio_4':desafio_4,'desafio_5':desafio_5, 'pdf_11':pdf_11, 'desafio_6':desafio_6})
 
+
+@login_required
 def Matematica_Discreta(request):
     pdf_1 = Pdf.objects.get(id=22)
     pdf_2 = Pdf.objects.get(id=28)
@@ -111,6 +119,8 @@ def Matematica_Discreta(request):
     desafio_3 = Desafio.objects.get(id=16)
 
     return render(request,'lcc_app/matematica_discreta.html',{'pdf_1':pdf_1,'desafio_1':desafio_1,'pdf_2':pdf_2,'desafio_2':desafio_2,'pdf_3':pdf_3,'desafio_3':desafio_3})
+
+@login_required
 def Introducao_programacao(request):
     pdf_1 = Pdf.objects.get(id=23)
     pdf_2 = Pdf.objects.get(id=24)

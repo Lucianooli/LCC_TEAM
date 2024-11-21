@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="../../static/lcc_app/css/index.css">
 </head>
 <body>
+    <script src="../../static/lcc_app/js/index.js">
+    </script>
+    <div id="loading-screen">
+        <div class="loading-icon"></div>
+      </div>
     <div class="start">
         <h1 class="title_1">LCC: Reforço e Diversão</h1>
         {% if user.is_authenticated %}
@@ -43,6 +48,7 @@
             Utilizamos imagens e áudios para uma compreensão mais completa.</h1>
         </div>
     {% endif %}
+    
 
 </body>
 </html>
