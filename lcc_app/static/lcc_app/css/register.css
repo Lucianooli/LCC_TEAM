@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Londrina+Sketch&display=swap');
 
+/* Resetando margens e paddings */
 * {
     margin: 0;
     padding: 0;
@@ -9,131 +10,134 @@
 /* Configurações globais */
 html, body {
     height: 100%;
-    font-family: 'Arial', 'Helvetica', sans-serif; /* Definir uma fonte padrão */
+    font-family: 'Arial', 'Helvetica', sans-serif;
 }
 
 body {
     background-image: url('../images/Ciencia-da-Computacao.jpg');
-    background-size: cover; /* Faz a imagem cobrir toda a área da tela */
-    background-position: center; /* Posiciona a imagem no centro */
-    background-attachment: fixed; /* Faz com que a imagem permaneça fixa enquanto a página rola */
-    height: 100%; /* Garante que o body ocupe toda a altura da tela */
-    width: 100%; /* Garante que o body ocupe toda a largura da tela */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100%;
+    width: 100%;
 }
 
-a{
+a {
     text-decoration: none;
 }
+
 /* Estilo para o topo da página */
 .start {
     width: 100%;
     height: 5rem;
     color: #ffffff;
     display: flex;
-    justify-content: space-between; /* Organiza os elementos no topo com espaço entre eles */
-    align-items: center; /* Centraliza verticalmente */
-    padding: 0 2rem; /* Adiciona espaçamento à esquerda e à direita */
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
 }
 
-/* Estilizando o título */
 .title_1 {
-    font-size: 2rem; /* Tamanho de fonte ajustado */
-    font-weight: bold; /* Deixa o título mais destacado */
-    color: #ffffff; /* Cor branca para contraste com o fundo */
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffffff;
 }
 
-/* Estilo para os botões (login e register) */
+/* Estilizando os botões de login e registro */
 .login, .register {
     font-size: 1rem;
     color: #ffffff;
     background-color: #40B1E6;
-    padding: 0.5rem 1rem; /* Maior padding para tornar o botão mais clicável */
+    padding: 0.5rem 1rem;
     border-radius: 0.3rem;
-    text-decoration: none; /* Remove underline, se houver */
-    transition: background-color 0.3s ease; /* Efeito de transição suave ao passar o mouse */
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.login:hover, .register:hover {
+    background-color: #3399cc;
 }
 
 .login {
     margin-left: 54rem;
 }
 
-.login:hover, .register:hover {
-    background-color: #3399cc; /* Cor de fundo ao passar o mouse */
-}
-
-
-
-
-.card{
-    background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro semi-transparente */
+/* Estilo do card */
+.card {
+    background-color: rgba(0, 0, 0, 0.8);
     width: 40rem;
-    margin: auto; 
+    margin: auto;
     margin-top: 5%;
     color: #FFFFFF;
     height: 30rem;
     border-radius: 1rem;
-    box-shadow: 0 0 0.5rem #40B1E6; 
+    box-shadow: 0 0 0.5rem #40B1E6;
 }
 
-.formulario{
+/* Estilo do formulário */
+.formulario {
     padding: 0.5rem;
     text-align: center;
     font-family: "Cormorant Garamond", serif;
     font-weight: 300;
     font-size: 1.7rem;
 }
-.texto_forms{
+
+.texto_forms {
     padding: 0.1rem;
 }
+
 .campos_forms input {
-    height: 3rem; /* Ajuste a altura do input para o tamanho desejado */
-    font-size: 1rem; /* Ajusta o tamanho da fonte dentro do input */
-    padding: 0.5rem; /* Adiciona padding interno para dar mais espaçamento ao texto */
-    border-radius: 0.5rem; /* Adiciona bordas arredondadas para um visual mais moderno */
-    border: 1px solid #ccc; /* Borda do input */
-    width: 80%; /* Faz com que o input ocupe toda a largura disponível */
-    padding: 0.3rem;
+    height: 3rem;
+    font-size: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid #ccc;
+    width: 80%;
 }
-.campo_bt{
+
+.campo_bt {
     padding: 0.8rem;
 }
 
-.botao_register{
+.botao_register {
     font-size: 1rem;
     color: #ffffff;
     background-color: #40B1E6;
-    padding: 0.5rem 1rem; /* Maior padding para tornar o botão mais clicável */
+    padding: 0.5rem 1rem;
     border-radius: 0.3rem;
-    text-decoration: none; /* Remove underline, se houver */
+    text-decoration: none;
     transition: background-color 0.3s ease;
 }
+
+/* Estilo do final da página */
 .end {
-    background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro semi-transparente */
-    width: 35rem; 
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 35rem;
     margin-left: 2rem;
     margin-top: 8%;
     color: #FFFFFF;
     height: 24rem;
     padding: 2rem;
     border-radius: 1rem;
-    box-shadow: 0 0 0.5rem #40B1E6; 
+    box-shadow: 0 0 0.5rem #40B1E6;
     font-family: "Cormorant Garamond", serif;
     font-weight: 300;
     text-align: justify;
     position: relative;
     left: 0;
-    
-   
-    backdrop-filter: blur(10px); /* Aplica o desfoque de 10px */
-    -webkit-backdrop-filter: blur(10px); /* Suporte para Safari */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
-.title_2{
+
+.title_2 {
     font-family: "Cormorant Garamond", serif;
     font-weight: 500;
     font-size: 3rem;
     text-align: center;
     padding-top: 0.5rem;
 }
+
 .end::after {
     content: "";
     position: absolute;
@@ -141,24 +145,101 @@ a{
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(255, 255, 255, 0.1); /* Uma camada sutil para simular brilho no vidro */
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 1rem;
 }
 
-/* Responsividade: Ajustar o layout em telas menores */
+/* Responsividade: Ajustes para telas menores */
 @media (max-width: 768px) {
+    /* Ajustes no topo */
     .start {
-        flex-direction: column; /* Organiza os itens verticalmente em telas menores */
+        flex-direction: column; /* Organiza os itens verticalmente */
         align-items: center;
         height: auto;
         padding: 1rem;
     }
 
     .title_1 {
-        font-size: 1.5rem; /* Reduz o tamanho da fonte em telas menores */
+        font-size: 1.5rem; /* Reduz o tamanho da fonte */
     }
 
     .login, .register {
-        margin: 0.5rem 0; /* Ajusta os botões para ficarem em bloco e não em linha */
+        margin: 0.5rem 0; /* Botões em bloco */
+        width: 100%; /* Os botões ocupam toda a largura */
+        padding: 1rem; /* Aumenta o padding */
+    }
+
+    /* Ajustes no card */
+    .card {
+        width: 90%; /* Aumenta a largura do card */
+        margin-top: 2rem; /* Ajusta a margem superior */
+    }
+
+    /* Ajustes no formulário */
+    .formulario {
+        font-size: 1.4rem; /* Ajusta o tamanho da fonte */
+    }
+
+    .campos_forms input {
+        width: 100%; /* Input ocupa toda a largura */
+        height: 2.5rem; /* Ajuste a altura do input */
+    }
+
+    .campo_bt {
+        padding: 1rem;
+    }
+
+    /* Ajustes no final da página */
+    .end {
+        width: 90%; /* Faz o final ocupar toda a largura da tela */
+        margin-left: 0; /* Alinha ao centro */
+        margin-top: 2rem;
+        padding: 1.5rem;
+    }
+
+    .title_2 {
+        font-size: 2rem; /* Ajusta o tamanho da fonte */
+    }
+
+    /* Ajustes para vídeos e outros elementos dinâmicos */
+    .video {
+        width: 100%;
+        height: auto;
+        margin-top: 1rem; /* Ajusta o espaçamento superior */
+    }
+}
+
+/* Responsividade para smartphones muito pequenos */
+@media (max-width: 480px) {
+    /* Ajusta a barra de navegação */
+    .login, .register {
+        font-size: 1.1rem;
+        padding: 1rem 2rem; /* Aumenta o padding para uma área mais clicável */
+    }
+
+    /* Ajusta o card e outros elementos */
+    .card {
+        width: 95%; /* Aumenta a largura do card */
+        height: auto; /* Ajusta a altura */
+    }
+
+    /* Ajustes de tamanhos de fonte */
+    .title_1, .title_2 {
+        font-size: 1.2rem; /* Reduz o tamanho do texto */
+    }
+
+    /* Ajuste para o formulário */
+    .formulario {
+        font-size: 1.2rem;
+    }
+
+    .campos_forms input {
+        font-size: 1rem; /* Ajusta o tamanho da fonte */
+    }
+
+    /* Ajustes nos vídeos */
+    .video iframe {
+        width: 100%; /* O vídeo ocupa toda a largura da tela */
+        height: auto; /* Ajusta a altura automaticamente */
     }
 }

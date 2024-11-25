@@ -23,27 +23,28 @@ body {
     width: 100%;
 }
 
-.rotas{    
+.rotas {    
     font-size: 1rem;
     color: #ffffff;
     text-transform: uppercase;
     position: relative;
     margin-top: 1rem;
-    margin-left: 85rem;
     background-color: #40B1E6;
-    padding: 0.7rem 2rem; /* Maior padding para tornar o botão mais clicável */
+    padding: 0.7rem 2rem;
     border-radius: 0.3rem;
-    text-decoration: none; /* Remove underline, se houver */
-    transition: background-color 0.3s ease; /* Efeito de transição suave ao passar o mouse */
-    cursor: grab;
-}
-
-.rotas:hover{
-    background-color: #3399cc; /* Cor de fundo ao passar o mouse */
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    display: inline-block;
+    margin-left:90%;
 
 }
 
-.escolhas{
+.rotas:hover {
+    background-color: #3399cc;
+}
+
+.escolhas {
     background-color: rgb(0, 0, 0);
     width: 50rem;
     margin: 5% auto;
@@ -59,44 +60,42 @@ body {
     position: relative;
 }
 
-.escolhas button{
+/* Estilo dos botões dentro do card de escolhas */
+.escolhas button {
     font-size: 1rem;
     color: #ffffff;
     text-transform: uppercase;
-    position: relative;
     margin-top: 1rem;
-    font-family: Arial, Helvetica, sans-serif;
     background-color: #ff0000;
-    padding: 0.7rem 2rem; /* Maior padding para tornar o botão mais clicável */
+    padding: 0.7rem 2rem;
     border-radius: 0.3rem;
-    text-decoration: none; /* Remove underline, se houver */
-    transition: background-color 0.3s ease; /* Efeito de transição suave ao passar o mouse */
-    cursor: grab;
-
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
 }
 
-.tela{
+.tela {
     color: white;
 }
 
-.Quiz{
+.Quiz {
     font-size: 1rem;
     color: #ffffff;
     text-transform: uppercase;
     position: relative;
     margin-top: 1rem;
-    font-family: Arial, Helvetica, sans-serif;
     background-color: #40B1E6;
-    padding: 0.7rem 2rem; /* Maior padding para tornar o botão mais clicável */
+    padding: 0.7rem 2rem;
     border-radius: 0.3rem;
-    text-decoration: none; /* Remove underline, se houver */
-    transition: background-color 0.3s ease; /* Efeito de transição suave ao passar o mouse */
-    cursor: grab;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
 }
 
-.Quiz:hover{
-    background-color:#045698;
+.Quiz:hover {
+    background-color: #045698;
 }
+
 .nova-tela {
     background-color: rgba(0, 0, 0, 0.7);
     width: 50rem;
@@ -108,21 +107,22 @@ body {
     text-align: center;
 }
 
-.Titulo2{
+.Titulo2 {
     font-family: Arial, Helvetica, sans-serif;
     text-align: justify;
 }
 
-.Titulo3{
+.Titulo3 {
     font-family: Arial, Helvetica, sans-serif;
     text-align: justify;
 }
 
-.resultado_final{
+.resultado_final {
     color: rgb(255, 255, 255);
     text-align: center;
 }
-.rotas_1{
+
+.rotas_1 {
     font-size: 1rem;
     color: #ffffff;
     text-transform: uppercase;
@@ -130,35 +130,146 @@ body {
     top: -41rem;
     margin-left: 5rem;
     background-color: #40B1E6;
-    padding: 0.4rem 1rem; /* Maior padding para tornar o botão mais clicável */
+    padding: 0.4rem 1rem;
     border-radius: 0.3rem;
-    text-decoration: none; /* Remove underline, se houver */
-    transition: background-color 0.3s ease; /* Efeito de transição suave ao passar o mouse */
-    cursor: grab;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
 }
 
-.resultado_1{
-    color:#d8004a;
-    padding-bottom:2rem;
-
+.resultado_1 {
+    color: #d8004a;
+    padding-bottom: 2rem;
 }
 
-
-.resultado_2{
-    color:#d8004a;
-    padding-top:1rem;
-}
-.resultado_3{
-    padding-top:1rem;
-    color:#d8004a;
+.resultado_2 {
+    color: #d8004a;
+    padding-top: 1rem;
 }
 
-.resultado_4{
-    padding-top:1rem;
-    color:#d8004a;
+.resultado_3 {
+    padding-top: 1rem;
+    color: #d8004a;
 }
 
-.valor{
+.resultado_4 {
+    padding-top: 1rem;
+    color: #d8004a;
+}
+
+.valor {
     color: #00e2ff;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Responsividade: Ajustes para telas menores, como celulares */
+@media (max-width: 768px) {
+    /* Ajuste do botão rotas */
+    .rotas {
+        margin-left: 2rem;
+        width: 90%; /* O botão ocupará mais largura */
+        padding: 0.6rem 1.5rem;
+        font-size: 1.2rem; /* Maior tamanho de fonte */
+        display: block; /* Exibe como bloco em telas pequenas */
+    }
+
+    /* Ajuste no card escolhas */
+    .escolhas {
+        width: 90%; /* Reduz a largura do card para caber melhor na tela */
+        margin: 5% auto;
+        padding: 1.5rem;
+    }
+
+    .escolhas button {
+        font-size: 1rem;
+        padding: 0.7rem 1.5rem; /* Ajuste do padding para botões */
+        width: 100%; /* Botões ocupam toda a largura */
+    }
+
+    /* Ajuste nos botões Quiz */
+    .Quiz {
+        width: 100%;
+        font-size: 1rem;
+        padding: 1rem;
+        display: block; /* Exibe o botão em bloco */
+        margin-top: 1.5rem;
+    }
+
+    /* Ajustes de tamanho para o novo card tela */
+    .nova-tela {
+        width: 90%; /* Aumenta a largura do card em telas pequenas */
+        padding: 1.5rem;
+    }
+
+    /* Ajusta os títulos em telas menores */
+    .Titulo2, .Titulo3 {
+        font-size: 1.5rem; /* Tamanhos de fonte menores em telas pequenas */
+    }
+
+    /* Ajustes no resultado final */
+    .resultado_final {
+        font-size: 1.2rem; /* Ajuste de fonte para resultados */
+    }
+
+    /* Ajuste da rota 1 */
+    .rotas_1 {
+        width: 80%; /* Ajuste da largura para telas menores */
+        margin-left: auto;
+        margin-right: auto;
+        top: 0; /* Remover a posição fixa */
+        display: block; /* Exibe como bloco */
+        padding: 0.5rem 1rem; /* Ajuste no padding */
+    }
+
+    /* Ajuste nos textos de resultados */
+    .resultado_1, .resultado_2, .resultado_3, .resultado_4 {
+        font-size: 1rem;
+        padding-top: 1rem;
+        text-align: center; /* Centraliza os resultados */
+    }
+
+    /* Ajuste no valor */
+    .valor {
+        font-size: 1.2rem;
+    }
+}
+
+/* Responsividade para dispositivos ainda menores (ex: smartphones muito pequenos) */
+@media (max-width: 480px) {
+    .rotas, .escolhas button, .Quiz, .rotas_1 {
+        padding: 1rem 2rem; /* Aumenta o padding dos botões */
+        font-size: 1.2rem; /* Fonte maior */
+    }
+
+    .escolhas, .nova-tela {
+        width: 95%; /* Ajuste a largura para telas muito pequenas */
+        padding: 1.2rem; /* Menos padding */
+    }
+
+    .titulo2, .Titulo3 {
+        font-size: 1.2rem; /* Tamanho reduzido */
+    }
+
+    .resultado_final {
+        font-size: 1rem; /* Tamanho de fonte menor */
+    }
+}
+/* Contêiner responsivo para o iframe */
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 640px; /* Largura máxima, você pode ajustar conforme necessário */
+    height: 0;
+    padding-bottom: 56.25%; /* Proporção 16:9 */
+    margin: 0 auto; /* Centraliza o vídeo */
+}
+
+/* Estilo do iframe dentro do contêiner */
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none; /* Remove a borda do iframe */
 }

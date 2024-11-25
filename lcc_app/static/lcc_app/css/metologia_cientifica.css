@@ -23,13 +23,14 @@ body {
     width: 100%;
 }
 
-.rotas{    
+/* Botões */
+.rotas, .Quiz, .escolhas button {
     font-size: 1rem;
     color: #ffffff;
     text-transform: uppercase;
     position: relative;
     margin-top: 1rem;
-    margin-left: 85rem;
+    font-family: Arial, Helvetica, sans-serif;
     background-color: #40B1E6;
     padding: 0.7rem 2rem; /* Maior padding para tornar o botão mais clicável */
     border-radius: 0.3rem;
@@ -37,14 +38,16 @@ body {
     transition: background-color 0.3s ease; /* Efeito de transição suave ao passar o mouse */
     cursor: grab;
 }
-
-.rotas:hover{
+.rotas{
+    margin-left: 90%;
+}
+.rotas:hover, .Quiz:hover {
     background-color: #3399cc; /* Cor de fundo ao passar o mouse */
-
 }
 
-.escolhas{
-    background-color: rgb(0, 0, 0);
+/* Container de escolhas */
+.escolhas {
+    background-color: rgba(0, 0, 0, 0.7);
     width: 50rem;
     margin: 5% auto;
     color: #FFFFFF;
@@ -59,106 +62,117 @@ body {
     position: relative;
 }
 
-.escolhas button{
-    font-size: 1rem;
+/* Ajustes nos títulos */
+.Titulo2, .Titulo3 {
+    font-size: 1.3rem;
+    text-align: center;
     color: #ffffff;
-    text-transform: uppercase;
-    position: relative;
-    margin-top: 1rem;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #ff0000;
-    padding: 0.7rem 2rem; /* Maior padding para tornar o botão mais clicável */
-    border-radius: 0.3rem;
-    text-decoration: none; /* Remove underline, se houver */
-    transition: background-color 0.3s ease; /* Efeito de transição suave ao passar o mouse */
-    cursor: grab;
-
+    margin-bottom: 1.5rem;
 }
 
-.tela{
-    color: white;
-}
-
-.Quiz{
-    font-size: 1rem;
-    color: #ffffff;
-    text-transform: uppercase;
-    position: relative;
-    margin-top: 1rem;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #40B1E6;
-    padding: 0.7rem 2rem; /* Maior padding para tornar o botão mais clicável */
-    border-radius: 0.3rem;
-    text-decoration: none; /* Remove underline, se houver */
-    transition: background-color 0.3s ease; /* Efeito de transição suave ao passar o mouse */
-    cursor: grab;
-}
-
-.Quiz:hover{
-    background-color:#045698;
-}
+/* Tela de resultado final */
 .nova-tela {
     background-color: rgba(0, 0, 0, 0.7);
     width: 50rem;
-    margin: 5% auto;
-    color: #FFFFFF;
+    margin-top: 3%;
     padding: 2rem;
     border-radius: 1rem;
     box-shadow: 0 0 0.5rem #40B1E6;
     text-align: center;
 }
 
-.Titulo2{
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: justify;
-}
-
-.Titulo3{
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: justify;
-}
-
-.resultado_final{
+.resultado_final {
     color: rgb(255, 255, 255);
-    text-align: center;
-}
-.rotas_1{
-    font-size: 1rem;
-    color: #ffffff;
-    text-transform: uppercase;
-    position: relative;
-    top: -41rem;
-    margin-left: 5rem;
-    background-color: #40B1E6;
-    padding: 0.4rem 1rem; /* Maior padding para tornar o botão mais clicável */
-    border-radius: 0.3rem;
-    text-decoration: none; /* Remove underline, se houver */
-    transition: background-color 0.3s ease; /* Efeito de transição suave ao passar o mouse */
-    cursor: grab;
+    font-size: 1.4rem;
+    margin-top: 1.5rem;
 }
 
-.resultado_1{
-    color:#d8004a;
-    padding-bottom:2rem;
-
+/* Estilos para as respostas */
+.resultado_1, .resultado_2, .resultado_3, .resultado_4 {
+    color: #d8004a;
+    padding-top: 1rem;
+    font-size: 1.1rem;
 }
 
 
-.resultado_2{
-    color:#d8004a;
-    padding-top:1rem;
-}
-.resultado_3{
-    padding-top:1rem;
-    color:#d8004a;
+
+/* Responsividade: Ajustes em telas menores */
+@media (max-width: 768px) {
+
+
+    iframe {
+        height: 200px; /* Ajuste a altura para telas menores */
+    }
+
+    /* Ajuste no container de escolhas */
+    .escolhas {
+        width: 90%;
+        padding: 1.5rem;
+        margin-top: 3rem;
+    }
+
+    /* Ajuste nos botões */
+    .rotas, .Quiz, .escolhas button {
+        width: 100%;
+        padding: 1rem 2rem;
+        font-size: 1rem;
+    }
+
+    /* Ajustes nos títulos */
+    .Titulo2, .Titulo3 {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+
+    /* Ajuste na tela de resultado */
+    .nova-tela {
+        width: 90%;
+        margin-top: 2rem;
+    }
+
+    .resultado_final {
+        font-size: 1.2rem;
+        margin-top: 1.5rem;
+    }
 }
 
-.resultado_4{
-    padding-top:1rem;
-    color:#d8004a;
-}
+/* Responsividade para dispositivos móveis menores */
+@media (max-width: 480px) {
 
-.valor{
-    color: #00e2ff;
-    font-family: Arial, Helvetica, sans-serif;
+    iframe {
+        height: 180px; /* Ajusta para telas menores */
+    }
+    /* Botões mais espaçados */
+    .rotas, .Quiz, .escolhas button {
+        font-size: 1.2rem;
+        width: 80%;
+        margin-top: 1.5rem;
+        padding: 1.5rem 2rem;
+    }
+    .rotas{
+        margin-left:3rem;
+        
+    }
+    /* Ajuste de espaçamento e padding */
+    .escolhas {
+        padding: 1.5rem;
+        margin-top: 3rem;
+    }
+
+    .nova-tela {
+        width: 90%;
+        margin-top: 2rem;
+        padding: 2rem;
+    }
+
+    .resultado_final {
+        font-size: 1.1rem;
+        margin-top: 1.5rem;
+    }
+
+    /* Títulos ajustados para uma leitura melhor */
+    .Titulo2, .Titulo3 {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+    }
 }

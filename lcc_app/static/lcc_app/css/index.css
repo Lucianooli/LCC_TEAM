@@ -34,7 +34,6 @@ body {
     padding: 0 2rem;
 }
 
-/* Estilizando o título */
 .title_1 {
     font-size: 2rem;
     font-weight: bold;
@@ -100,8 +99,6 @@ body {
     text-align: justify;
     position: relative;
     left: 0;
-    
-   
     backdrop-filter: blur(10px); /* Aplica o desfoque de 10px */
     -webkit-backdrop-filter: blur(10px); /* Suporte para Safari */
 }
@@ -146,43 +143,44 @@ body {
     transform: translateY(-5px);
 }
 
-
+/* Tela de carregamento */
 #loading-screen {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('../images/tela_de_carregamento.png'); /* Caminho correto da imagem */
-    background-size: cover;  /* Garante que a imagem cubra toda a tela sem distorcer */
-    background-position: center;  /* Centraliza a imagem de fundo */
-    background-repeat: no-repeat;  /* Evita que a imagem se repita */
+    background-image: url('../images/tela_de_carregamento.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 9999;
-    }
-    
-    .loading-icon {
-      width: 50px;
-      height: 50px;
-      border: 5px solid #f3f3f3;
-      border-top: 5px solid #2ecc71;
-      border-radius: 50%;
-      animation: spin 1s linear infinite;
-    }
-    
-    /* Animação de rotação do ícone */
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-    
-    /* Estilo para o conteúdo da página */
-    #content {
-      padding: 20px;
-      text-align: center;
-    }
+}
+
+.loading-icon {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #2ecc71;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/* Animação de rotação do ícone */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Estilo para o conteúdo da página */
+#content {
+    padding: 20px;
+    text-align: center;
+}
+
 /* Responsividade: ajuste do layout e botões em telas menores */
 @media (max-width: 768px) {
     .start {
@@ -194,20 +192,36 @@ body {
 
     .title_1 {
         font-size: 1.5rem;
+        text-align: center; /* Centraliza o título */
     }
 
     .login, .register {
         margin: 0.5rem 0;
+        width: 100%; /* Botões ocupam 100% da largura */
+        text-align: center;
     }
 
     .card {
-        width: 90%;
+        width: 90%; /* Card ocupa 90% da largura */
         margin: 5% auto;
+        padding: 1.5rem;
+        font-size: 1rem; /* Reduz o tamanho da fonte */
+    }
+
+    .end {
+        width: 90%; /* Largura ajustada para telas pequenas */
+        margin-top: 2rem;
+        height: auto; /* Ajusta a altura do card */
+        padding: 1.5rem;
     }
 
     .P1 button {
         font-size: 1rem;
         padding: 0.7rem 1rem;
-        width: 100%; /* Botões ocupam 100% da largura em telas menores */
+        width: 100%; /* Botões ocupam 100% da largura */
+    }
+
+    .login {
+        margin-left: 0; /* Remove a margem à esquerda nos dispositivos menores */
     }
 }

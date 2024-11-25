@@ -23,7 +23,7 @@ body {
     width: 100%;
 }
 
-.rotas{    
+.rotas {    
     font-size: 1rem;
     color: #ffffff;
     text-transform: uppercase;
@@ -38,12 +38,12 @@ body {
     cursor: grab;
 }
 
-.rotas:hover{
+.rotas:hover {
     background-color: #3399cc; /* Cor de fundo ao passar o mouse */
-
 }
 
-.escolhas{
+/* Estilo para escolhas */
+.escolhas {
     background-color: rgb(0, 0, 0);
     width: 50rem;
     margin: 5% auto;
@@ -59,7 +59,8 @@ body {
     position: relative;
 }
 
-.escolhas button{
+/* Estilo para os botões dentro de escolhas */
+.escolhas button {
     font-size: 1rem;
     color: #ffffff;
     text-transform: uppercase;
@@ -72,14 +73,15 @@ body {
     text-decoration: none; /* Remove underline, se houver */
     transition: background-color 0.3s ease; /* Efeito de transição suave ao passar o mouse */
     cursor: grab;
-
 }
 
-.tela{
+/* Estilo para tela */
+.tela {
     color: white;
 }
 
-.Quiz{
+/* Estilo para o botão Quiz */
+.Quiz {
     font-size: 1rem;
     color: #ffffff;
     text-transform: uppercase;
@@ -94,9 +96,11 @@ body {
     cursor: grab;
 }
 
-.Quiz:hover{
-    background-color:#045698;
+.Quiz:hover {
+    background-color: #045698;
 }
+
+/* Estilo para nova tela */
 .nova-tela {
     background-color: rgba(0, 0, 0, 0.7);
     width: 50rem;
@@ -108,21 +112,24 @@ body {
     text-align: center;
 }
 
-.Titulo2{
+/* Títulos */
+.Titulo2 {
     font-family: Arial, Helvetica, sans-serif;
     text-align: justify;
 }
 
-.Titulo3{
+.Titulo3 {
     font-family: Arial, Helvetica, sans-serif;
     text-align: justify;
 }
 
-.resultado_final{
+/* Estilo para o resultado final */
+.resultado_final {
     color: rgb(255, 255, 255);
     text-align: center;
 }
-.rotas_1{
+
+.rotas_1 {
     font-size: 1rem;
     color: #ffffff;
     text-transform: uppercase;
@@ -137,28 +144,128 @@ body {
     cursor: grab;
 }
 
-.resultado_1{
-    color:#d8004a;
-    padding-bottom:2rem;
-
+/* Estilo para as mensagens de resultado */
+.resultado_1 {
+    color: #d8004a;
+    padding-bottom: 2rem;
 }
 
-
-.resultado_2{
-    color:#d8004a;
-    padding-top:1rem;
-}
-.resultado_3{
-    padding-top:1rem;
-    color:#d8004a;
+.resultado_2 {
+    color: #d8004a;
+    padding-top: 1rem;
 }
 
-.resultado_4{
-    padding-top:1rem;
-    color:#d8004a;
+.resultado_3 {
+    padding-top: 1rem;
+    color: #d8004a;
 }
 
-.valor{
+.resultado_4 {
+    padding-top: 1rem;
+    color: #d8004a;
+}
+
+/* Estilo para valores */
+.valor {
     color: #00e2ff;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+/* -------------------------------- */
+/* Consultas de mídia para responsividade */
+
+/* Para telas menores que 768px */
+@media (max-width: 768px) {
+
+
+    iframe {
+        height: 200px; /* Ajuste a altura para telas menores */
+    }
+
+    
+    body {
+        background-attachment: scroll; /* Desativa o efeito de fixação do fundo em telas pequenas */
+    }
+
+    .rotas {
+        margin-left: 0;
+        margin-top: 1rem;
+        width: 100%;
+        padding: 0.7rem 1rem;
+        text-align: center;
+    }
+
+    .escolhas {
+        width: 90%;
+        margin: 3% auto;
+        padding: 1rem;
+    }
+
+    .Quiz {
+        width: 100%;
+        padding: 0.7rem 1rem;
+        margin-top: 1rem;
+    }
+
+    .tela {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .nova-tela {
+        width: 90%;
+        margin: 3% auto;
+    }
+
+    .rotas_1 {
+        position: relative;
+        margin-left: 0;
+        margin-top: 1rem;
+        width: 100%;
+        padding: 0.7rem 1rem;
+        text-align: center;
+    }
+}
+
+/* Para telas menores que 480px */
+@media (max-width: 480px) {
+
+    iframe {
+        height: 180px; /* Ajusta para telas menores */
+    }
+
+    .escolhas {
+        width: 95%;
+        padding: 1rem;
+    }
+
+    .Quiz {
+        padding: 0.7rem 1rem;
+        margin-top: 1rem;
+    }
+
+    .tela {
+        padding: 0.5rem;
+    }
+
+    .resultado_1, .resultado_2, .resultado_3, .resultado_4 {
+        font-size: 0.9rem; /* Ajusta o tamanho do texto para telas menores */
+    }
+
+    .rotas, .rotas_1, .Quiz {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .valor {
+        font-size: 1rem;
+    }
+
+    .rotas {
+        margin-left: 0;
+        margin-top: 1rem;
+        width: 100%;
+        padding: 0.7rem 1rem;
+        text-align: center;
+    }
 }

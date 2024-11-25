@@ -9,134 +9,136 @@
 /* Configurações globais */
 html, body {
     height: 100%;
-    font-family: 'Arial', 'Helvetica', sans-serif; /* Definir uma fonte padrão */
+    font-family: 'Arial', 'Helvetica', sans-serif; /* Fonte padrão */
 }
 
 body {
     background-image: url('../images/Ciencia-da-Computacao.jpg');
-    background-size: cover; /* Faz a imagem cobrir toda a área da tela */
-    background-position: center; /* Posiciona a imagem no centro */
-    background-attachment: fixed; /* Faz com que a imagem permaneça fixa enquanto a página rola */
-    height: 100%; /* Garante que o body ocupe toda a altura da tela */
-    width: 100%; /* Garante que o body ocupe toda a largura da tela */
+    background-size: cover; /* Cobre a tela toda */
+    background-position: center; /* Centraliza a imagem */
+    background-attachment: fixed; /* Fixa a imagem enquanto rola */
+    height: 100%; /* Garante que ocupe toda a altura da tela */
+    width: 100%; /* Garante que ocupe toda a largura da tela */
 }
 
-a{
+a {
     text-decoration: none;
 }
-/* Estilo para o topo da página */
+
+/* Estilo do topo da página */
 .start {
     width: 100%;
     height: 5rem;
     color: #ffffff;
     display: flex;
-    justify-content: space-between; /* Organiza os elementos no topo com espaço entre eles */
-    align-items: center; /* Centraliza verticalmente */
-    padding: 0 2rem; /* Adiciona espaçamento à esquerda e à direita */
+    justify-content: space-between; /* Espaço entre itens */
+    align-items: center; /* Alinha verticalmente */
+    padding: 0 2rem;
 }
 
-/* Estilizando o título */
+/* Estilizando o título principal */
 .title_1 {
-    font-size: 2rem; /* Tamanho de fonte ajustado */
-    font-weight: bold; /* Deixa o título mais destacado */
-    color: #ffffff; /* Cor branca para contraste com o fundo */
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffffff;
 }
 
-/* Estilo para os botões (login e register) */
+/* Estilo para os botões de login e cadastro */
 .login, .register {
     font-size: 1rem;
     color: #ffffff;
     background-color: #40B1E6;
-    padding: 0.5rem 1rem; /* Maior padding para tornar o botão mais clicável */
+    padding: 0.5rem 1rem;
     border-radius: 0.3rem;
-    text-decoration: none; /* Remove underline, se houver */
-    transition: background-color 0.3s ease; /* Efeito de transição suave ao passar o mouse */
+    text-decoration: none;
+    transition: background-color 0.3s ease;
 }
 
 .login {
-    margin-left: 54rem;
+    margin-left: auto; /* Alinha o botão de login à direita */
 }
 
 .login:hover, .register:hover {
-    background-color: #3399cc; /* Cor de fundo ao passar o mouse */
+    background-color: #3399cc; /* Efeito hover */
 }
 
-
-
-
-.card{
-    background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro semi-transparente */
+/* Estilo para o cartão principal */
+.card {
+    background-color: rgba(0, 0, 0, 0.8);
     width: 40rem;
-    margin: auto; 
-    margin-top: 5%;
+    margin: 5% auto;
     color: #FFFFFF;
-    height: 30rem;
+    padding: 2rem;
     border-radius: 1rem;
-    box-shadow: 0 0 0.5rem #40B1E6; 
+    box-shadow: 0 0 0.5rem #40B1E6;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 300;
+    text-align: center;
 }
 
-.formulario{
+/* Estilo para os formulários */
+.formulario {
     padding: 2rem;
     text-align: center;
     font-family: "Cormorant Garamond", serif;
     font-weight: 300;
     font-size: 1.7rem;
 }
-.texto_forms{
-    padding: 1rem;
-    
 
+.texto_forms {
+    padding: 1rem;
 }
+
 .campos_forms input {
-    height: 3rem; /* Ajuste a altura do input para o tamanho desejado */
-    font-size: 1rem; /* Ajusta o tamanho da fonte dentro do input */
-    padding: 0.5rem; /* Adiciona padding interno para dar mais espaçamento ao texto */
-    border-radius: 0.5rem; /* Adiciona bordas arredondadas para um visual mais moderno */
-    border: 1px solid #ccc; /* Borda do input */
-    width: 80%; /* Faz com que o input ocupe toda a largura disponível */
-    padding: 0.3rem;
+    height: 3rem;
+    font-size: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid #ccc;
+    width: 80%;
 }
-.campo_bt{
+
+.campo_bt {
     padding: 0.8rem;
 }
 
-.botao_register{
+.botao_register {
     font-size: 1rem;
     color: #ffffff;
-    height: 3rem;
     background-color: #40B1E6;
-    padding: 0.5rem 1rem; /* Maior padding para tornar o botão mais clicável */
+    height: 3rem;
+    padding: 0.5rem 1rem;
     border-radius: 0.3rem;
-    text-decoration: none; /* Remove underline, se houver */
     transition: background-color 0.3s ease;
 }
+
 .end {
-    background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro semi-transparente */
-    width: 35rem; 
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 35rem;
     margin-left: 2rem;
     margin-top: 8%;
     color: #FFFFFF;
     height: 24rem;
     padding: 2rem;
     border-radius: 1rem;
-    box-shadow: 0 0 0.5rem #40B1E6; 
+    box-shadow: 0 0 0.5rem #40B1E6;
     font-family: "Cormorant Garamond", serif;
     font-weight: 300;
     text-align: justify;
     position: relative;
     left: 0;
-    
-   
-    backdrop-filter: blur(10px); /* Aplica o desfoque de 10px */
-    -webkit-backdrop-filter: blur(10px); /* Suporte para Safari */
+    backdrop-filter: blur(10px); /* Aplica o desfoque */
+    -webkit-backdrop-filter: blur(10px);
 }
-.title_2{
+
+.title_2 {
     font-family: "Cormorant Garamond", serif;
     font-weight: 500;
     font-size: 3rem;
     text-align: center;
     padding-top: 0.5rem;
 }
+
 .end::after {
     content: "";
     position: absolute;
@@ -144,24 +146,88 @@ a{
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(255, 255, 255, 0.1); /* Uma camada sutil para simular brilho no vidro */
+    background: rgba(255, 255, 255, 0.1); /* Brilho sutil */
     border-radius: 1rem;
 }
 
-/* Responsividade: Ajustar o layout em telas menores */
+/* Responsividade: Ajuste para dispositivos móveis (celulares) */
 @media (max-width: 768px) {
+    /* Organiza os itens verticalmente em telas pequenas */
     .start {
-        flex-direction: column; /* Organiza os itens verticalmente em telas menores */
+        flex-direction: column;
         align-items: center;
         height: auto;
         padding: 1rem;
     }
 
     .title_1 {
-        font-size: 1.5rem; /* Reduz o tamanho da fonte em telas menores */
+        font-size: 1.5rem; /* Reduz o título para tela pequena */
+        text-align: center;
     }
 
     .login, .register {
-        margin: 0.5rem 0; /* Ajusta os botões para ficarem em bloco e não em linha */
+        width: 100%; /* Botões ocupam a largura total */
+        margin: 1rem 0;
+    }
+
+    .card {
+        width: 90%; /* Faz o card ocupar mais da tela */
+        margin-top: 2%; /* Menos espaço em cima */
+        padding: 1.5rem; /* Menos espaçamento dentro do card */
+    }
+
+    .formulario {
+        font-size: 1.5rem; /* Ajusta o tamanho da fonte no formulário */
+    }
+
+    .campos_forms input {
+        width: 100%; /* Inputs ocupam a largura total */
+        height: 3.5rem; /* Ajuste de altura para facilitar o toque */
+        font-size: 1rem;
+    }
+
+    .botao_register {
+        font-size: 1rem;
+        width: 100%; /* Botão ocupa toda a largura */
+        padding: 1rem;
+    }
+
+    .end {
+        width: 90%; /* End ocupa mais espaço na tela */
+        margin-top: 2%;
+        padding: 1.5rem; /* Menos espaçamento dentro da "end" */
+    }
+
+    .title_2 {
+        font-size: 2rem; /* Ajuste no tamanho do título da "end" */
+    }
+}
+
+/* Responsividade para dispositivos ainda menores (ex: smartphones muito pequenos) */
+@media (max-width: 480px) {
+    .title_1 {
+        font-size: 1.3rem; /* Ajuste para telas muito pequenas */
+    }
+
+    .login, .register {
+        padding: 0.5rem 0; /* Botões com mais padding */
+    }
+
+    .card {
+        width: 100%; /* Faz o card ocupar toda a tela */
+        margin-top: 1.5%; /* Ajuste fino para a margem superior */
+        padding: 1rem;
+    }
+
+    .botao_register {
+        font-size: 1rem;
+        width: 100%; /* O botão ocupa toda a largura da tela */
+        padding: 1rem;
+    }
+
+    .end {
+        width: 100%; /* End ocupa 100% da tela */
+        margin-top: 3%;
+        padding: 1rem;
     }
 }
