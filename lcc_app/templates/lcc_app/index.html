@@ -8,11 +8,38 @@
     <link rel="stylesheet" href="../../static/lcc_app/css/index.css">
 </head>
 <body>
-    <script src="../../static/lcc_app/js/index.js">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Obtém a data da última visita armazenada
+            let lastVisitDate = localStorage.getItem("lastVisitDate");
+    
+            // Obtém a data atual
+            let todayDate = new Date().toISOString().split('T')[0]; // "YYYY-MM-DD"
+    
+            // Verifica se a data da última visita é diferente da data atual
+            if (lastVisitDate !== todayDate) {
+                // Se for a primeira vez no dia, exibe a tela de carregamento
+                // Espera 3 segundos para remover a tela de carregamento
+                setTimeout(function () {
+                    // Remove a tela de carregamento
+                    document.getElementById('loading-screen').style.display = 'none';
+                    // Mostra o conteúdo do site
+                    document.getElementById('content').style.display = 'block';
+                }, 5000);
+    
+                // Atualiza a data da última visita
+                localStorage.setItem("lastVisitDate", todayDate);
+            } else {
+                // Se já visitou no mesmo dia, apenas remove a tela de carregamento e mostra o conteúdo
+                document.getElementById('loading-screen').style.display = 'none';
+                document.getElementById('content').style.display = 'block';
+            }
+        });
     </script>
-    <div id="loading-screen">
-        <div class="loading-icon"></div>
-      </div>
+    
+<div id="loading-screen">
+    <div class="loading-icon"></div>
+ </div>
     <div class="start">
         <h1 class="title_1">LCC: Reforço e Diversão</h1>
         {% if user.is_authenticated %}

@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
           document.getElementById('loading-screen').style.display = 'none';
           // Mostra o conteúdo do site
           document.getElementById('content').style.display = 'block';
-        }, 3000);
+        }, 5000);
 
         // Marca que o usuário já viu a tela de carregamento
         localStorage.setItem("hasVisited", "true");
